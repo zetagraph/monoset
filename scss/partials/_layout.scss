@@ -1,0 +1,19 @@
+.contain {
+    margin: 0 auto;
+    padding: 0 1rem;
+    @include breakpoint(md) {
+        width: 80%;
+        padding: 0;
+    }
+
+    @include breakpoint(lg) {
+        width: 70%;
+    }
+}
+
+.content {
+    padding: 3.5rem 1rem;
+    @include breakpoint(md) {
+        padding: 5rem 0 2rem 0 ;
+    }
+}

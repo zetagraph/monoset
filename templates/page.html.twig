@@ -1,0 +1,84 @@
+<div class="header-main">
+  <div class="contain">
+    <a class ="logo" href="{{ front_page }}" title="{{ site_name }} » {{ site_slogan }}">
+      logo
+    </a>
+    {% if page.nav %}
+    {{ page.nav }}
+    {% endif %}
+  </div>
+</div>
+
+<!-- Menu Button -->
+<div class="menu-btn open" aria-hidden="true">&#9776; Menu</div>
+
+<div class="offcanvas pushy pushy-left">
+  <div class="menu-btn close" aria-hidden="true">&#10005; Menu</div>
+  {% if page.nav %}
+  {{ page.nav }}
+  {% endif %}
+</div>
+
+<!-- Site Overlay -->
+<div class="site-overlay"></div>
+
+<div id="container" class="container-main">
+  <!-- Front Page -->
+
+  {% if is_front %}
+  <div class="front">
+
+    <div class="banner fadein">
+      <div class="contain">
+        Front Banner
+      </div>
+    </div>
+
+  </div>
+
+  {% else %}
+
+  <!-- Main Content -->
+
+  <div class="content contain">
+    {% if secondary_local_tasks %}
+    <div class="tabs-secondary clearfix" role="navigation">{{ secondary_local_tasks }}</div>
+    {% endif %}
+
+    {{ title_prefix }}
+    {% if title %}
+    <h1 class="page-title">{{ title }}</h1>
+    {% endif %}
+    {{ title_suffix }}
+    {% if primary_local_tasks %}
+    {{ primary_local_tasks }}
+    {% endif %}
+
+    <main class="page-content" role="main">
+      <div class="visually-hidden"><a id="main-content" tabindex="-1"></a></div>
+      {{ messages }}
+      {% if page.help %}
+      <div class="help">
+        {{ page.help }}
+      </div>
+      {% endif %}
+      {% if action_links %}
+      <ul class="action-links">
+        {{ action_links }}
+      </ul>
+      {% endif %}
+
+      {{ page.content }}
+
+      {% endif %}
+
+    </main>
+  </div>
+</div>
+<footer class="footer-main">
+  <div class="contain">
+    {% if page.footer %}
+    {{ page.footer }}
+    {% endif %}
+  </div>
+</footer>

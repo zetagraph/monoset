@@ -1,0 +1,73 @@
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    display: block;
+    background: none;
+    border: 2px solid $light-grey;
+    background-color: $white;
+    color: $grey;
+    width: 100%;
+    padding: 1rem;
+    appearance: none;
+    box-shadow: none;
+    border-radius: none;
+    transition: border 0.3s;
+}
+
+input[type="submit"] {
+    display: block;
+    border: none;
+    background: $grey;
+    width: 100%;
+    padding: 1rem;
+    margin: 0 0 1rem;
+    cursor: pointer;
+    color: $white;
+    font-family: $sans-serif;
+    @include font-size(18px);
+    font-weight: $light;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+    &:hover {
+        background: $grey;
+        color: $black;
+    }
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus {
+    outline: none;
+    border-color: $grey;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+select {
+    background: transparent;
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid $light-grey;
+    border-radius: 0;
+    background-color: $white;
+    background: url(../img/chevron-down.svg) no-repeat 99% 50%;
+
+    color: $grey;
+
+    box-shadow: none;
+    border-radius: none;
+    transition: border 0.3s;
+    appearance: none;
+    -webkit-appearance: none;
+
+}
+
+// Form item wrappers
+
+.form-item {
+    margin: 0 0 1rem;
+}

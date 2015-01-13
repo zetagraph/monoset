@@ -1,0 +1,8 @@
+a {
+    color: $link-color;
+    transition: .5s;
+    text-decoration: none;
+    &:hover {
+        color: darken($link-color, 20);
+    }
+}

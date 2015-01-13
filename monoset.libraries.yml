@@ -1,0 +1,33 @@
+global-styling:
+  version: VERSION
+  css:
+    theme:
+      css/style.css: { }
+
+global-scripts:
+  version: VERSION
+  js:
+    js/pushy.js: { scope: footer }
+    js/script.js: { scope: footer }
+  dependencies:
+    - core/jquery
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
+    - core/modernizr
+
+vendor-custom:
+  version: VERSION
+  js:
+    js/vendor/fastclick.js: { scope: footer }
+
+# remote-custom:
+#   remote: https://github.com/yui/yui3
+#   license:
+#     name: BSD
+#     url: https://github.com/yui/yui3/blob/master/LICENSE.md
+#     gpl-compatible: true
+#   version: 3.18.0
+#   js:
+#     http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js:  { type: external, browsers: { IE: 'lte IE 8', '!IE': false } }

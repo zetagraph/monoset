@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * @file
+ * Contains theme override and preprocess functions.
+ */
+
+use Drupal\Component\Utility\String;
+use Drupal\Component\Utility\Xss;
+use Drupal\Core\Template\Attribute;
+
+function monoset_css_alter(&$css) {
+  $theme_path = drupal_get_path('theme', 'monoset');
+// Add googlefonts.
+  $googlefonts = '//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700|Source+Serif+Pro:700,400';
+  $css[$googlefonts] = array(
+    'data' => $googlefonts,
+    'type' => 'external',
+    'every_page' => TRUE,
+    'media' => 'all',
+    'preprocess' => FALSE,
+    'group' => CSS_AGGREGATE_THEME,
+    'browsers' => array('IE' => TRUE, '!IE' => TRUE),
+    'weight' => -1,
+  );
+
+// Load only on Front Page
+
+// function monoset_preprocess_page(&$variables) {
+//   if($variables['is_front']){
+//     $variables['#attached']['library'][] = 'monoset/test-custom';
+//   }
+
+}

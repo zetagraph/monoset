@@ -1,0 +1,61 @@
+body {
+    font-family: $serif;
+    font-weight: $normal;
+    color: $black;
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $sans-serif;
+    font-weight: $bold;
+}
+
+.content {
+    h1, h2, h3, h4, h5, h6, hgroup,
+    ul, ol, dl,
+    blockquote, p, address,
+    table,
+    form,
+    pre,
+    hr {
+        margin-bottom: 1.5rem;
+    }
+}
+
+p {
+    @include font-size(16px);
+}
+
+h1 {
+    @include font-size(60px);
+    line-height: 1;
+    margin-bottom: 3rem;
+}
+
+h2 {
+    @include font-size(48px);
+}
+
+h3 {
+    @include font-size(36px);
+}
+
+h4 {
+    @include font-size(24px);
+}
+
+h5 {
+    @include font-size(20px);
+}
+
+h6 {
+    @include font-size(16px);
+}
+
+@font-face {
+    font-family: "responsivenav";
+    src: url("../icons/responsivenav.eot");
+    src: url("../icons/responsivenav.eot?#iefix") format("embedded-opentype"), url("../icons/responsivenav.ttf") format("truetype"), url("../icons/responsivenav.woff") format("woff"), url("../icons/responsivenav.svg#responsivenav") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}

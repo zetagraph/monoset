@@ -1,0 +1,44 @@
+.header-main {
+    display: none;
+    @include breakpoint(md) {
+        display: block;
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        width: 100%;
+        padding: 1rem 0;
+        background: $white;
+        border-bottom: 1px solid $light-grey;
+        transition: top .5s ease-in-out;
+        &.up {
+            top: -4rem;
+        }
+    }
+}
+
+.logo {
+    float: left;
+    width: 20px;
+    height: 26px;
+    display: block;
+    text-indent: -999rem;
+    background: url(../img/logo.svg) no-repeat;
+}
+
+.header-main .menu {
+    float: right;
+}
+
+.header-main .menu li {
+    display: inline;
+    a {
+        display: inline-block;
+        margin: 0  1rem 0 0;
+        @include font-size(14px);
+        font-family: $sans-serif;
+        font-weight: $light;
+        &:hover {
+            color: $black;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+name: Monoset
+type: theme
+description: Drupal 8 Theme
+version: 1.0
+core: 8.x
+screenshot: img/screenshot.png
+libraries:
+ - monoset/global-styling
+ - monoset/global-scripts
+ - monoset/vendor-custom
+
+stylesheets-remove:
+  - normalize.css
+  - system.theme.css
+  # - system.module.css
+  # - views.module.css
+
+regions:
+  nav: 'Navigation'
+  content: Content
+  help: Help
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  sidebar_first: 'First sidebar'
+  footer: 'Footer'
+regions_hidden:
+  - sidebar_first
