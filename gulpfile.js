@@ -10,7 +10,7 @@ var reload      = browserSync.reload;
 
 // sass task
 // gulp.task('sass', function () {
-//     return gulp.src('scss/**/*.scss')
+//     return gulp.src('sass/**/*.scss')
 //         .pipe(sourcemaps.init())
 //             .pipe(sass({
 //                 //outputStyle: 'compressed',
@@ -26,13 +26,13 @@ var reload      = browserSync.reload;
 
 //         .pipe(autoprefixer({browsers: ['last 2 versions']}))
 //         .pipe(sourcemaps.write())
-//         .pipe(gulp.dest('css'))
-//         .pipe(filter('scss**/*.css')) // Filtering stream to only css files
+//         .pipe(gulp.dest('styles'))
+//         .pipe(filter('sass**/*.css')) // Filtering stream to only css files
 //         .pipe(browserSync.reload({stream:true}));
 // });
 
 gulp.task('sass', function () {
-    return gulp.src('scss/**/*.scss')
+    return gulp.src('sass/**/*.scss')
       // Convert sass into css
       .pipe(sass({
         sourcemap: true,
@@ -60,10 +60,10 @@ gulp.task('sass', function () {
       .pipe(sourcemaps.write())
 
       // Save the CSS
-      .pipe(gulp.dest('css'))
+      .pipe(gulp.dest('styles'))
 
       // Filtering stream to only css files
-      .pipe(filter('scss**/*.css'))
+      .pipe(filter('sass/**/*.css'))
 
       .pipe(browserSync.reload({stream:true}));
 });
@@ -71,8 +71,8 @@ gulp.task('sass', function () {
 
 // process JS files and return the stream.
 gulp.task('js', function () {
-    return gulp.src('js/*js')
-        .pipe(gulp.dest('js'));
+    return gulp.src('scripts/**/*.js')
+        .pipe(gulp.dest('scripts'));
 });
 
 // run drush to clear the theme registry.
@@ -84,10 +84,10 @@ gulp.task('drush', shell.task([
 gulp.task('browser-sync', function() {
     //watch files
     var files = [
-    'css/style.css',
-    'js/*js',
-    'img/**/*',
-    'templates/*.twig'
+    'styles/main.css',
+    'scripts/**/*.js',
+    'images/**/*',
+    'templates/**/*.twig'
     ];
 
     //initialize browsersync
@@ -100,6 +100,6 @@ gulp.task('browser-sync', function() {
 
 // Default task to be run with `gulp`
 gulp.task('default', ['sass', 'js',  'browser-sync'], function () {
-    gulp.watch("scss/**/*.scss", ['sass']);
-    gulp.watch("js/*.js", ['js']);
+    gulp.watch("sass/**/*.scss", ['sass']);
+    gulp.watch("scripts/**/*.js", ['js']);
 });

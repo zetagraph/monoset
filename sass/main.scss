@@ -1,0 +1,19 @@
+@import "partials/utils/variables";
+@import "partials/utils/functions";
+@import "partials/utils/mixins";
+
+@import "partials/base/reset";
+@import "partials/base/typography";
+
+@import "partials/layout/layout";
+@import "partials/layout/header";
+@import "partials/layout/footer";
+@import "partials/layout/forms";
+@import "partials/layout/offcanvas";
+
+@import "partials/components/buttons";
+@import "partials/components/links";
+@import "partials/components/drupal-overrides";
+@import "partials/components/animations";
+
+@import "partials/pages/front";
