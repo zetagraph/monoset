@@ -1,3 +1,9 @@
+/**
+*
+* Layout
+*
+**/
+
 .contain {
     margin: 0 auto;
     padding: 0 1rem;
@@ -14,6 +20,6 @@
 .content {
     padding: 3.5rem 1rem;
     @include breakpoint(md) {
-        padding: 5rem 0 2rem 0 ;
+        padding: 5rem 0 2rem 0;
     }
 }

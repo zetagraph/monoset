@@ -1,3 +1,9 @@
+/**
+*
+* Animations
+*
+**/
+
 .fadein {
     opacity: 0;
     animation: fadeIn ease-in 1;
@@ -12,6 +18,15 @@
         opacity: 0;
     }
     to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInopacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
         opacity: 1;
     }
 }

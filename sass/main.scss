@@ -1,19 +1,31 @@
+/**
+*
+* Imports
+*
+**/
+
+// Utils
 @import "partials/utils/variables";
 @import "partials/utils/functions";
 @import "partials/utils/mixins";
 
+// Base
 @import "partials/base/reset";
+@import "partials/base/global";
 @import "partials/base/typography";
 
+// Components
+@import "partials/components/lists";
+@import "partials/components/links";
+@import "partials/components/drupal-overrides";
+@import "partials/components/animations";
+
+//  Layout
 @import "partials/layout/layout";
 @import "partials/layout/header";
 @import "partials/layout/footer";
 @import "partials/layout/forms";
 @import "partials/layout/offcanvas";
 
-@import "partials/components/buttons";
-@import "partials/components/links";
-@import "partials/components/drupal-overrides";
-@import "partials/components/animations";
-
+// Pages
 @import "partials/pages/front";

@@ -1,3 +1,9 @@
+/**
+*
+* Mixins
+*
+**/
+
 // Breakpoints
 
 @mixin breakpoint($class) {
@@ -17,6 +23,7 @@
 }
 
 // Clearfix
+
 @mixin clearfix {
     &:before,
     &:after {
@@ -28,20 +35,16 @@
     }
 }
 
-// Box Model
-@mixin box-sizing($box-model) {
-    box-sizing: $box-model;
-}
-
-// Type
-@function calculateRem($size) {
-    $remSize: $size / 16px;
-    //Default font size on html element is 100%, equivalent to 16px;
-    @return #{$remSize}rem;
-}
-
 // Mixin that will include the fall back px declaration as well as the calculated rem value.
 @mixin font-size($size) {
     font-size: $size;
     font-size: calculateRem($size);
+}
+
+
+@mixin vertical-align {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    transform-style: preserve-3d;
 }

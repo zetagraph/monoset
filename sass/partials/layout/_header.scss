@@ -1,3 +1,9 @@
+/**
+*
+* Header
+*
+**/
+
 .header-main {
     display: none;
     @include breakpoint(md) {
@@ -6,9 +12,9 @@
         z-index: 100;
         top: 0;
         width: 100%;
+        height: 3.8rem;
         padding: 1rem 0;
         background: $white;
-        border-bottom: 1px solid $light-grey;
         transition: top .5s ease-in-out;
         &.up {
             top: -4rem;
@@ -35,7 +41,7 @@
         display: inline-block;
         margin: 0  1rem 0 0;
         @include font-size(14px);
-        font-family: $sans-serif;
+        font-family: $fontHighlight;
         font-weight: $light;
         &:hover {
             color: $black;

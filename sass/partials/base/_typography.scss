@@ -1,13 +1,20 @@
+/**
+*
+* Typography
+*
+**/
+
 body {
-    font-family: $serif;
-    font-weight: $normal;
+    font-family: $fontDefault;
+    font-weight: $light;
     color: $black;
     line-height: 1.5;
+    font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: $sans-serif;
-    font-weight: $bold;
+    font-family: $fontHighlight;
+    font-weight: $x-bold;
 }
 
 .content {

@@ -8,29 +8,6 @@ var notify = require("gulp-notify");
 var shell = require('gulp-shell');
 var reload      = browserSync.reload;
 
-// sass task
-// gulp.task('sass', function () {
-//     return gulp.src('sass/**/*.scss')
-//         .pipe(sourcemaps.init())
-//             .pipe(sass({
-//                 //outputStyle: 'compressed',
-//                 style: 'expanded',
-//                 sourceComments: 'normal',
-//                 // outputStyle: 'nested',
-//                 precision: 10,
-//                 noCache : true,
-//                 onError: function (err) {
-//                     notify().write(err);
-//                 }
-//             }))
-
-//         .pipe(autoprefixer({browsers: ['last 2 versions']}))
-//         .pipe(sourcemaps.write())
-//         .pipe(gulp.dest('styles'))
-//         .pipe(filter('sass**/*.css')) // Filtering stream to only css files
-//         .pipe(browserSync.reload({stream:true}));
-// });
-
 gulp.task('sass', function () {
     return gulp.src('sass/**/*.scss')
       // Convert sass into css

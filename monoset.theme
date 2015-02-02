@@ -12,7 +12,7 @@ use Drupal\Core\Template\Attribute;
 function monoset_css_alter(&$css) {
   $theme_path = drupal_get_path('theme', 'monoset');
 // Add googlefonts.
-  $googlefonts = '//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700|Source+Serif+Pro:700,400';
+  $googlefonts = '//fonts.googleapis.com/css?family=Montserrat:700|Open+Sans:300,600,400';
   $css[$googlefonts] = array(
     'data' => $googlefonts,
     'type' => 'external',

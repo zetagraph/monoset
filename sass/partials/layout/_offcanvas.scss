@@ -1,3 +1,9 @@
+/**
+*
+* Off Canvas Nav
+*
+**/
+
 .menu-btn {
     position: absolute;
     top: 0;
@@ -91,16 +97,7 @@
     left: 0;
     z-index: 9998;
     background-color: rgba(0, 0, 0, 0.5);
-    animation: fade 500ms;
-}
-
-@keyframes fade {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+    animation: fadeInopacity 500ms;
 }
 
 
@@ -116,7 +113,7 @@
         padding: 1rem;
         border-bottom: 1px solid $dark-grey;
         color: $white;
-        font-family: $sans-serif;
+        font-family: $fontHighlight;
         font-weight: $light;
     }
 }

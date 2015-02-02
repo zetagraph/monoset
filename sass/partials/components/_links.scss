@@ -1,8 +1,18 @@
+/**
+*
+* Links
+*
+**/
+
 a {
     color: $link-color;
     transition: .5s;
     text-decoration: none;
     &:hover {
         color: darken($link-color, 20);
+    }
+    &:visited {
+        text-decoration: none;
+        outline: 0;
     }
 }

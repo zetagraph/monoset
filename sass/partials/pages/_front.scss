@@ -1,6 +1,81 @@
+/**
+*
+* Front
+*
+**/
+
+.front {
+    padding: 3.8rem 0 0 0;
+}
+
 .banner {
-    margin: 3.5rem 0 3rem;
     padding: 10rem 0;
-    background: $light-grey;
+    background: $blue;
+    h1 {
+        text-transform: uppercase;
+        @include font-size(86px);
+        line-height: 1;
+        letter-spacing: -3px;
+        margin: 0;
+        color: $white;
+    }
+}
+
+.banner-alter {
+    @include clearfix;
+    background: $white;
+    h1 {
+        text-transform: uppercase;
+        @include font-size(86px);
+        line-height: 1;
+        margin: 0;
+        color: $blue;
+    }
+    p {
+        @include font-size(20px);
+    }
+}
+
+.left-half {
+    float: left;
+    width: 50vw;
+    height: 50vh;
+    background: $grey-50;
+    h1 {
+        @include vertical-align;
+        text-align: center;
+        font-size: 40px;
+    }
+}
+
+.right-half {
+    float: right;
+    width: 50vw;
+    height: 50vh;
+    background: $grey-100;
+    h1 {
+        @include vertical-align;
+        text-align: center;
+        font-size: 40px;
+    }
+}
+
+.banner-alter-two {
+  height: 20rem;
+  background: url(../images/19.jpg) no-repeat 50% 0;
+  background-size: cover;
+  position: relative;
+
+  &:before {
+    content: "";
+    height: 20rem;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba($red, 0.5);
+  }
+  h1 {
+    position: relative;
     color: $white;
+  }
 }

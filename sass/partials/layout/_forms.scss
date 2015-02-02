@@ -1,3 +1,9 @@
+/**
+*
+* Forms
+*
+**/
+
 input[type="text"],
 input[type="email"],
 input[type="password"] {
@@ -23,7 +29,7 @@ input[type="submit"] {
     margin: 0 0 1rem;
     cursor: pointer;
     color: $white;
-    font-family: $sans-serif;
+    font-family: $fontHighlight;
     @include font-size(18px);
     font-weight: $light;
     text-transform: uppercase;
@@ -55,15 +61,12 @@ select {
     border-radius: 0;
     background-color: $white;
     background: url(../img/chevron-down.svg) no-repeat 99% 50%;
-
     color: $grey;
-
     box-shadow: none;
     border-radius: none;
     transition: border 0.3s;
     appearance: none;
     -webkit-appearance: none;
-
 }
 
 // Form item wrappers
