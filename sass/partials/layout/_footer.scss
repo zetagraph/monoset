@@ -6,7 +6,7 @@
 
 .footer-main {
     padding: 1rem 0;
-    background: $light-grey;
-    font-family: $fontHighlight;
-    font-weight: $light;
+    background: $grey-50;
+    border-top: 1px solid $grey-100;
+    @include font-size(14px);
 }

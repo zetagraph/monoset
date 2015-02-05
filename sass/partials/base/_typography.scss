@@ -6,15 +6,15 @@
 
 body {
     font-family: $fontDefault;
-    font-weight: $light;
+    font-weight: $thin;
     color: $black;
     line-height: 1.5;
     font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: $fontHighlight;
-    font-weight: $x-bold;
+    // font-family: $fontHighlight;
+    // font-weight: $ultra-bold;
 }
 
 .content {
@@ -25,22 +25,26 @@ h1, h2, h3, h4, h5, h6 {
     form,
     pre,
     hr {
-        margin-bottom: 1.5rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.content {
+    h1 {
+        @include font-size(60px);
+        line-height: .9;
+        margin-bottom: 2rem;
     }
 }
 
 p {
-    @include font-size(16px);
-}
-
-h1 {
-    @include font-size(60px);
-    line-height: 1;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 h2 {
     @include font-size(48px);
+    line-height: .9;
+    margin: 0 0 2rem 0;
 }
 
 h3 {
@@ -57,6 +61,39 @@ h5 {
 
 h6 {
     @include font-size(16px);
+}
+
+strong {
+    font-weight: $bold;
+}
+
+blockquote {
+    display: block;
+    padding: 1rem 3rem 1rem 2.5rem;
+    position: relative;
+    font-family: $fontHighlight;
+    @include font-size(20px);
+    line-height: 1.2;
+    font-style: italic;
+}
+
+blockquote::before {
+    content: "\201C";
+    @include font-size(60px);
+    font-weight: $bold;
+    color: $grey-400;
+    font-style: normal;
+    position: absolute;
+    left: 0;
+    top: 5px;
+}
+
+blockquote::after {
+    content: "";
+}
+
+pre {
+    white-space: pre-wrap;
 }
 
 @font-face {

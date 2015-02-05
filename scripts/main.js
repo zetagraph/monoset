@@ -2,45 +2,44 @@
 
   Drupal.behaviors.customTweaks = {
     attach: function (context, settings) {
-
-      // Hide Header on on scroll down
-      var didScroll;
-      var lastScrollTop = 0;
-      var delta = 5;
-      var navbarHeight = $('.header-main').outerHeight();
-
-      $(window).scroll(function(event){
-          didScroll = true;
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 1){
+          $('.header-main').addClass("sticky");
+        }
+        else {
+          $('.header-main').removeClass("sticky");
+        }
       });
 
-      setInterval(function() {
-          if (didScroll) {
-              hasScrolled();
-              didScroll = false;
-          }
-      }, 250);
+      // Smooth Scroll to Application
 
-      function hasScrolled() {
-          var st = $(this).scrollTop();
+      $(".scroll").click(function(event){ // When a link with the .scroll class is clicked
+          event.preventDefault(); // Prevent the default action from occurring
+          $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500); // Animate the scroll to this link's href value
+      });
 
-          // Make sure they scroll more than delta
-          if(Math.abs(lastScrollTop - st) <= delta)
-              return;
+      // SVG Injector
 
-          // If they scrolled down and are past the navbar, add class .up.
-          // This is necessary so you never see what is "behind" the navbar.
-          if (st > lastScrollTop && st > navbarHeight){
-              // Scroll Down
-              $('.header-main').removeClass('down').addClass('up');
-          } else {
-              // Scroll Up
-              if(st + $(window).height() < $(document).height()) {
-                  $('.header-main').removeClass('up').addClass('down');
-              }
-          }
+      // For testing in IE8
+      if (!window.console){ console = {log: function() {}}; };
 
-          lastScrollTop = st;
-      }
+      // Elements to inject
+      var mySVGsToInject = document.querySelectorAll('img.inject-svg');
+
+      // Options
+      var injectorOptions = {
+        evalScripts: 'once',
+        each: function (svg) {
+          // Callback after each SVG is injected
+          if (svg) console.log('SVG injected: ' + svg.getAttribute('id'));
+        }
+      };
+
+      // Trigger the injection
+      SVGInjector(mySVGsToInject, injectorOptions, function (totalSVGsInjected) {
+        // Callback after all SVGs are injected
+        console.log('We injected ' + totalSVGsInjected + ' SVG(s)!');
+      });
 
     }
   };

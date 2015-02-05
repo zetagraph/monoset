@@ -18,3 +18,14 @@
         top: 39px;
     }
 }
+
+// Drupal messages
+
+.messages {
+  padding: 1rem;
+  margin: 0 0 2rem;
+  border: 2px solid $grey-200;
+  &.messages--status {
+    border-color: $red;
+  }
+}

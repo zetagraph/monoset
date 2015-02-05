@@ -15,11 +15,31 @@
         height: 3.8rem;
         padding: 1rem 0;
         background: $white;
-        transition: top .5s ease-in-out;
-        &.up {
-            top: -4rem;
+        border-bottom: solid 1px $grey-200;
+        &.sticky {
+            background: $white;
         }
     }
+}
+
+.path-frontpage .header-main {
+    border: none;
+    background: none;
+    transition: all .5s ease-in-out;
+}
+
+.path-frontpage .header-main.sticky {
+    border: none;
+    background: rgba($white, 0.9);
+    box-shadow: 0 2px 5px rgba($black, 0.25);
+}
+
+.path-frontpage .header-main .menu li a {
+    color: $grey-600;
+}
+
+.path-frontpage .header-main.sticky .menu li a {
+    color: $black;
 }
 
 .logo {
@@ -27,24 +47,36 @@
     width: 20px;
     height: 26px;
     display: block;
-    text-indent: -999rem;
-    background: url(../images/logo.svg) no-repeat;
+}
+
+.logo-svg {
+    fill: $grey-500;
+    transition: all .3s;
+    &:hover {
+        fill: $blue;
+    }
 }
 
 .header-main .menu {
+    margin: 3px 0 0 0;
     float: right;
 }
 
 .header-main .menu li {
     display: inline;
+    margin: 0  1rem 0 0;
+    &:last-child {
+        margin: 0;
+    }
     a {
         display: inline-block;
-        margin: 0  1rem 0 0;
         @include font-size(14px);
-        font-family: $fontHighlight;
-        font-weight: $light;
+        // font-family: $fontHighlight;
+        font-weight: $bold;
+        text-transform: uppercase;
+        color: $grey-600;
         &:hover {
-            color: $black;
+            color: $red;
         }
     }
 }

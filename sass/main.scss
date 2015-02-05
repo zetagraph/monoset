@@ -19,6 +19,7 @@
 @import "partials/components/links";
 @import "partials/components/drupal-overrides";
 @import "partials/components/animations";
+@import "partials/components/prism";
 
 //  Layout
 @import "partials/layout/layout";
@@ -29,3 +30,5 @@
 
 // Pages
 @import "partials/pages/front";
+@import "partials/pages/post";
+

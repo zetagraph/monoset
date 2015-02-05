@@ -5,11 +5,11 @@
 **/
 
 a {
-    color: $link-color;
+    color: $red;
     transition: .5s;
     text-decoration: none;
     &:hover {
-        color: darken($link-color, 20);
+        color: darken($red, 20);
     }
     &:visited {
         text-decoration: none;

@@ -5,7 +5,7 @@ global:
       styles/main.css: { }
 
   js:
-    scripts/main.js: { scope: footer, weight: -8 }
+    scripts/main.js: { scope: footer, weight: -6 }
   dependencies:
     - core/jquery
     - core/drupal.ajax
@@ -17,5 +17,13 @@ global:
 vendor:
   version: VERSION
   js:
-    scripts/vendor/pushy.js: { scope: footer, weight: -9 }
-    scripts/vendor/fastclick.js: { scope: footer , weight: -10}
+    scripts/vendor/pushy.js: { scope: footer, weight: -7 }
+    scripts/vendor/fastclick.js: { scope: footer , weight: -8 }
+    scripts/vendor/svg-injector.min.js: { scope: footer , weight: -9 }
+    scripts/vendor/prism.js: { scope: footer , weight: -10 }
+
+
+test-custom:
+  version: VERSION
+  js:
+    scripts/vendor/test-custom.js: { scope: footer, weight: -9 }

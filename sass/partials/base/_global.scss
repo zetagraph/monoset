@@ -11,3 +11,8 @@ html {
 *, *:before, *:after {
     box-sizing: inherit;
 }
+
+::selection {
+    background: $blue;
+    color: $white;
+}

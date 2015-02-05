@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg width="20px" height="26px" viewBox="0 0 20 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <title>Untitled 2</title>
-    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <title>Logo</title>
+    <description>Logo</description>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="drop" sketch:type="MSLayerGroup" fill="#BBBBBB">
+        <g id="drop" sketch:type="MSLayerGroup" fill="#bdbdbd">
             <path d="M10.030309,0.372318389 C11.278764,2.53086472 12.7639053,4.13594113 14.30881,5.80573177 C15.335503,6.9154587 16.3972387,8.06291295 17.4439185,9.43958613 L17.4504274,9.44808328 L17.457002,9.45651244 C18.9264957,11.3372362 19.6712032,13.7098425 19.5540434,16.1371705 C19.4360947,18.5812209 18.4485207,20.8810917 16.7732413,22.6131494 C14.9722551,24.4753834 12.5775805,25.5008186 10.0304405,25.5008186 C7.48330046,25.5008186 5.0886259,24.4753154 3.28750822,22.6131494 C1.61216305,20.8810917 0.624457594,18.5810849 0.506377383,16.1371025 C0.389020381,13.7097746 1.13366206,11.3372362 2.60309007,9.45651244 L2.60966469,9.44808328 L2.61617357,9.43958613 C3.66291913,8.06277699 4.72478632,6.91518679 5.75167653,5.80539189 C7.29664694,4.13560124 8.78172255,2.53072877 10.030309,0.372318389 L10.030309,0.372318389 Z" id="Shape" sketch:type="MSShapeGroup"></path>
         </g>
     </g>
