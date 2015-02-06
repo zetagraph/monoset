@@ -27,8 +27,15 @@
 @import "partials/layout/footer";
 @import "partials/layout/forms";
 @import "partials/layout/offcanvas";
+@import "partials/layout/front";
 
-// Pages
-@import "partials/pages/front";
-@import "partials/pages/post";
+// Modules
+@import "partials/modules/front-cover";
+@import "partials/modules/front-features";
+@import "partials/modules/front-icons";
+@import "partials/modules/front-posts";
+@import "partials/modules/front-featured";
+@import "partials/modules/front-news";
+@import "partials/modules/front-source";
 
+@import "partials/modules/post";

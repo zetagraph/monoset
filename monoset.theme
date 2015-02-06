@@ -27,8 +27,8 @@ function monoset_css_alter(&$css) {
 
 // Load only on Front Page
 
-// function monoset_preprocess_page(&$variables) {
-//   if($variables['is_front']){
-//     $variables['#attached']['library'][] = 'monoset/test-custom';
-//   }
-// }
+function monoset_preprocess_page(&$variables) {
+  if($variables['is_front']){
+    $variables['#attached']['library'][] = 'monoset/front-page';
+  }
+}

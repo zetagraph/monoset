@@ -1,0 +1,30 @@
+/**
+*
+* Front Source
+*
+**/
+
+.source {
+    background: $white;
+    padding: 6rem 0;
+    text-align: center;
+    h2 {
+        @include font-size(40px);
+        margin: 0 0 1rem 0;
+    }
+    p {
+      @include font-size(20px);
+    }
+    .source-code {
+        width: 64px;
+        height: 64px;
+    }
+    .heart {
+        width: 13px;
+        height: 13px;
+        fill: $red;
+        display: inline-block;
+        animation: pulsate 2s linear infinite;
+        opacity: 1;
+    }
+}

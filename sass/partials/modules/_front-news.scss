@@ -1,0 +1,28 @@
+/**
+*
+* Front News
+*
+**/
+
+.news {
+    background: $grey-50;
+    border-bottom: 1px solid $grey-200;
+    padding: 4rem 0;
+    text-align: center;
+    h2 {
+        @include font-size(40px);
+        margin: 0 0 2rem 0;
+    }
+    p {
+        padding: 0 10rem;
+        @include font-size(20px);
+        margin: 0 0 2rem 0;
+    }
+    .drupal-logo path {
+        fill: $grey-400;
+        transition: all .3s;
+    }
+    .drupal-logo:hover path {
+        fill: $blue;
+    }
+}

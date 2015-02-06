@@ -1,17 +1,18 @@
+<div  id="top"></div>
 <header class="header-main">
   <div class="contain">
-      <a class ="logo" href="{{ front_page }}" title="{{ site_name }} » {{ site_slogan }}">
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" width="20px" height="26px" viewBox="0 0 20 26" version="1.1">
-            <title>Logo</title>
-            <description>Logo</description>
-            <defs/>
-            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage" class="logo-svg">
-                <g sketch:type="MSLayerGroup" fill="">
-                    <path d="M10.030309 0.4 C11.278764 2.5 12.8 4.1 14.3 5.8 C15.335503 6.9 16.4 8.1 17.4 9.4 L17.4504274 9.4 L17.457002 9.5 C18.9264957 11.3 19.7 13.7 19.6 16.1 C19.4360947 18.6 18.4 20.9 16.8 22.6 C14.9722551 24.5 12.6 25.5 10 25.5 C7.48330046 25.5 5.1 24.5 3.3 22.6 C1.61216305 20.9 0.6 18.6 0.5 16.1 C0.389020381 13.7 1.1 11.3 2.6 9.5 L2.60966469 9.4 L2.61617357 9.4 C3.66291913 8.1 4.7 6.9 5.8 5.8 C7.29664694 4.1 8.8 2.5 10 0.4 L10.030309 0.4 Z" sketch:type="MSShapeGroup"/>
-                </g>
-            </g>
-        </svg>
-      </a>
+    <a  class ="logo" href="{{ front_page }}" title="{{ site_name }} » {{ site_slogan }}">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" width="20px" height="26px" viewBox="0 0 20 26" version="1.1">
+        <title>Logo</title>
+        <description>Logo</description>
+        <defs/>
+        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage" class="logo-svg">
+          <g sketch:type="MSLayerGroup" fill="">
+            <path d="M10.030309 0.4 C11.278764 2.5 12.8 4.1 14.3 5.8 C15.335503 6.9 16.4 8.1 17.4 9.4 L17.4504274 9.4 L17.457002 9.5 C18.9264957 11.3 19.7 13.7 19.6 16.1 C19.4360947 18.6 18.4 20.9 16.8 22.6 C14.9722551 24.5 12.6 25.5 10 25.5 C7.48330046 25.5 5.1 24.5 3.3 22.6 C1.61216305 20.9 0.6 18.6 0.5 16.1 C0.389020381 13.7 1.1 11.3 2.6 9.5 L2.60966469 9.4 L2.61617357 9.4 C3.66291913 8.1 4.7 6.9 5.8 5.8 C7.29664694 4.1 8.8 2.5 10 0.4 L10.030309 0.4 Z" sketch:type="MSShapeGroup"/>
+          </g>
+        </g>
+      </svg>
+    </a>
     {% if page.nav %}
     {{ page.nav }}
     {% endif %}
@@ -40,132 +41,151 @@
     <section class="cover">
       <div class="contain">
         <div class="cover-title">
-        <h1>Drupal <img class="drupal-logo inject-svg" data-src="themes/monoset/images/drupal-logo.svg" alt="drupal 8"> Theme</h1>
-        <div class="intro-title">Monoset &middot; Free &middot; Responsive &middot; Drupal 8 Theme </div>
-        <a class="download-button scroll" href="#main-content">Learn More</a>
+          <h1>Drupal <img class="drupal-logo inject-svg" data-src="themes/monoset/images/drupal-logo.svg" alt="drupal 8"> Theme</h1>
+          <div class="intro-title">Monoset &middot; Free &middot; Responsive &middot; Drupal 8 Theme </div>
+          <a class="scroll-button scroll" href="#features">Features <img class="arrow inject-svg" data-src="themes/monoset/icons/chevron-down.svg" alt="chevron-down"></a>
         </div>
       </div>
     </section>
 
-    <section class="front-section features">
-      <div class="contain">
-        <h2>Features</h2>
-        <ul class="feature-list">
-          <li><img class="checkbox inject-svg" data-src="themes/monoset/icons/checkbox-marked-circle.svg" alt="checkbox"> Drupal 8 (beta 6)</li>
-          <li><img class="checkbox inject-svg" data-src="themes/monoset/icons/checkbox-marked-circle.svg" alt="checkbox"> Responsive</li>
-          <li><img class="checkbox inject-svg" data-src="themes/monoset/icons/checkbox-marked-circle.svg" alt="checkbox"> Off-Canvas Navigation</li>
-          <li><img class="checkbox inject-svg" data-src="themes/monoset/icons/checkbox-marked-circle.svg" alt="checkbox">  LibSass</li>
-          <li><img class="checkbox inject-svg" data-src="themes/monoset/icons/checkbox-marked-circle.svg" alt="checkbox">  Gulp Work-Flow</li>
-          <li><img class="checkbox inject-svg" data-src="themes/monoset/icons/checkbox-marked-circle.svg" alt="checkbox">  BrowserSync</li>
-          <li><img class="checkbox inject-svg" data-src="themes/monoset/icons/checkbox-marked-circle.svg" alt="checkbox"> Sass partial structure</li>
-          <li><img class="checkbox inject-svg" data-src="themes/monoset/icons/checkbox-marked-circle.svg" alt="checkbox"> Google Fonts - Roboto</li>
-          <li><img class="checkbox inject-svg" data-src="themes/monoset/icons/checkbox-marked-circle.svg" alt="checkbox"> Sensible Default Typography</li>
-          <li><img class="checkbox inject-svg" data-src="themes/monoset/icons/checkbox-marked-circle.svg" alt="checkbox"> Material Design Icons</li>
-          <li><img class="checkbox inject-svg" data-src="themes/monoset/icons/checkbox-marked-circle.svg" alt="checkbox"> SVG Injection</li>
-          <li><img class="checkbox inject-svg" data-src="themes/monoset/icons/checkbox-marked-circle.svg" alt="checkbox"> Syntax Highlighter</li>
-      </ul>
-
- {#      <div class="source-code"><img class="icon inject-svg" data-src="themes/monoset/icons/github-circle.svg" alt="github">
-        Source Code</div> #}
-
-{#          <img src="themes/monoset/images/drupal-logo.svg">
- #}
-      </div>
-    </section>
-
-
-    <section class="front-section icons">
-      <div class="contain">
-        <h2>SVG Icons</h2>
-        <div class="icon-box">
-          <img class="icon inject-svg" data-src="themes/monoset/icons/cellphone-iphone.svg" alt="phone">
-        </div>
-        <div class="icon-box">
-          <img class="icon inject-svg" data-src="themes/monoset/icons/tablet-ipad.svg"  alt="tablet">
-        </div>
-        <div class="icon-box">
-          <img class="icon inject-svg" data-src="themes/monoset/icons/desktop-mac.svg" alt="desktop">
-        </div>
-        <div class="icon-box">
-          <img class="icon inject-svg" data-src="themes/monoset/icons/github-circle.svg" alt="github">
-        </div>
-        <p>Includes few sharp SVG Icons from Material Design set</p>
-      </div>
-    </section>
-
-
-    <section id="main-content" class="front-section blocks-grid">
-      <div class="box-one">
-        <h2>This is an Editable Block</h2>
-        <p>The only true happiness comes from squandering ourselves for a purpose. No man chooses evil because it is evil; he only mistakes it for happiness, the good he seeks. All happy people are grateful. </p>
-      </div>
-      <div class="box-two">
-        <h2>This is too an Editable Block</h2>
-        <p>Happiness does not depend on outward things, but on the way we see them. Persons thankful for the little things are certain to be the ones with much to be thankful for. To forgive is the highest, most beautiful form of love. In return, you will receive untold peace and happiness. We act as though comfort and luxury were the chief requirements of life, when all that we need to make us happy is something to be enthusiastic about</p>
-      </div>
-      <div class="box-three">
-        <h2>This is an Editable Block</h2>
-        <p>Ungrateful people cannot be happy. We tend to think that being unhappy leads people to complain, but it is truer to say that complaining leads to people becoming unhappy.</p>
-      </div>
-    </section>
-
-
-    <section class="front-section portfolio">
-      <div class="left-half">
-        <h2>Example Case Study</h2>
-        <p>The only true happiness comes from squandering ourselves for a purpose. No man chooses evil because it is evil; he only mistakes it for happiness, the good he seeks. All happy people are grateful. Ungrateful people cannot be happy. We tend to think that being unhappy leads people to complain, but it is truer to say that complaining leads to people becoming unhappy.</p>
-      </div>
-      <div class="right-half">
-        <h2>Example Portfolio Item</h2>
-        <p>Happiness does not depend on outward things, but on the way we see them. Persons thankful for the little things are certain to be the ones with much to be thankful for. To forgive is the highest, most beautiful form of love. In return, you will receive untold peace and happiness. We act as though comfort and luxury were the chief requirements of life, when all that we need to make us happy is something to be enthusiastic about</p>
-      </div>
-    </section>
-
+<section id="features" class="front-section features">
+  <div class="contain">
+    <h2>Features</h2>
+    <ul class="feature-list">
+      <li class="wow fadeIn" data-wow-duration=".5s" data-wow-delay=".1s"><img class="checkbox inject-svg" data-src="themes/monoset/icons/checkbox-marked-circle.svg" alt="checkbox"> Drupal 8 (beta 6)</li>
+      <li class="wow fadeIn" data-wow-duration=".5s" data-wow-delay=".2s"><img class="checkbox inject-svg" data-src="themes/monoset/icons/checkbox-marked-circle.svg" alt="checkbox"> Responsive</li>
+      <li class="wow fadeIn" data-wow-duration=".5s" data-wow-delay=".3s"><img class="checkbox inject-svg" data-src="themes/monoset/icons/checkbox-marked-circle.svg" alt="checkbox"> Off-Canvas Navigation</li>
+      <li class="wow fadeIn" data-wow-duration=".5s" data-wow-delay=".4s"><img class="checkbox inject-svg" data-src="themes/monoset/icons/checkbox-marked-circle.svg" alt="checkbox">  LibSass</li>
+      <li class="wow fadeIn" data-wow-duration=".5s" data-wow-delay=".5s"><img class="checkbox inject-svg" data-src="themes/monoset/icons/checkbox-marked-circle.svg" alt="checkbox">  Gulp Work-Flow</li>
+      <li class="wow fadeIn" data-wow-duration=".5s" data-wow-delay=".6s"><img class="checkbox inject-svg" data-src="themes/monoset/icons/checkbox-marked-circle.svg" alt="checkbox">  BrowserSync</li>
+      <li class="wow fadeIn" data-wow-duration=".5s" data-wow-delay=".7s"><img class="checkbox inject-svg" data-src="themes/monoset/icons/checkbox-marked-circle.svg" alt="checkbox"> Sass partial structure</li>
+      <li class="wow fadeIn" data-wow-duration=".5s" data-wow-delay=".8s"><img class="checkbox inject-svg" data-src="themes/monoset/icons/checkbox-marked-circle.svg" alt="checkbox"> Google Fonts - Roboto</li>
+      <li class="wow fadeIn" data-wow-duration=".5s" data-wow-delay=".9s"><img class="checkbox inject-svg" data-src="themes/monoset/icons/checkbox-marked-circle.svg" alt="checkbox"> Sensible Default Typography</li>
+      <li class="wow fadeIn" data-wow-duration=".5s" data-wow-delay="1s"><img class="checkbox inject-svg" data-src="themes/monoset/icons/checkbox-marked-circle.svg" alt="checkbox"> Material Design Icons</li>
+      <li class="wow fadeIn" data-wow-duration=".5s" data-wow-delay="1.1s"><img class="checkbox inject-svg" data-src="themes/monoset/icons/checkbox-marked-circle.svg" alt="checkbox"> SVG Injection</li>
+      <li class="wow fadeIn" data-wow-duration=".5s" data-wow-delay="1.2s"><img class="checkbox inject-svg" data-src="themes/monoset/icons/checkbox-marked-circle.svg" alt="checkbox"> Syntax Highlighter</li>
+    </ul>
   </div>
+</section>
 
-  {% else %}
 
-  <!-- Main Content -->
-
-  <div class="content contain">
-    {% if secondary_local_tasks %}
-    <div class="tabs-secondary clearfix" role="navigation">{{ secondary_local_tasks }}</div>
-    {% endif %}
-
-    {{ title_prefix }}
-    {% if title %}
-    <h1 class="page-title">{{ title }}</h1>
-    {% endif %}
-    {{ title_suffix }}
-    {% if primary_local_tasks %}
-    {{ primary_local_tasks }}
-    {% endif %}
-
-    <main class="page-content" role="main">
-      <div class="visually-hidden"><a id="main-content" tabindex="-1"></a></div>
-      {{ messages }}
-      {% if page.help %}
-      <div class="help">
-        {{ page.help }}
+<section class="front-section icons">
+  <div class="contain">
+    <h2>Few Sample Icons</h2>
+    <div class="icon-container">
+      <div class="icon-box wow fadeIn" data-wow-duration=".5s" data-wow-delay=".3s">
+        <img class="icon inject-svg" data-src="themes/monoset/icons/settings.svg" alt="phone">
       </div>
-      {% endif %}
-      {% if action_links %}
-      <ul class="action-links">
-        {{ action_links }}
-      </ul>
-      {% endif %}
-
-      {{ page.content }}
-
-      {% endif %}
-
-    </main>
+      <div class="icon-box wow fadeIn" data-wow-duration=".5s" data-wow-delay=".5s">
+        <img class="icon inject-svg" data-src="themes/monoset/icons/cellphone-iphone.svg"  alt="tablet">
+      </div>
+      <div class="icon-box wow fadeIn" data-wow-duration=".5s" data-wow-delay=".7s">
+        <img class="icon inject-svg" data-src="themes/monoset/icons/desktop-mac.svg" alt="desktop">
+      </div>
+      <div class="icon-box wow fadeIn" data-wow-duration=".5s" data-wow-delay=".9s">
+        <img class="icon inject-svg" data-src="themes/monoset/icons/github-circle.svg" alt="github">
+      </div>
+    </div>
+    <p>SVG Icons from Material Design Set</p>
   </div>
+</section>
+
+
+<section class="front-section posts">
+  <div class="box">
+    <h2>This is a Sample Post</h2>
+    <p>The only true happiness comes from squandering ourselves for a purpose. No man chooses evil because it is evil; he only mistakes it for happiness, the good he seeks. All happy people are grateful. </p>
+  </div>
+  <div class="box">
+    <h2>Another Sample Post</h2>
+    <p>Happiness does not depend on outward things, but on the way we see them. Persons thankful for the little things are certain to be the ones with much to be thankful for. To forgive is the highest, most beautiful form of love. In return, you will receive untold peace and happiness. We act as though comfort and luxury were the chief requirements of life, when all that we need to make us happy is something to be enthusiastic about</p>
+  </div>
+  <div class="box">
+    <h2>Yet another Sample Post</h2>
+    <p>Ungrateful people cannot be happy. We tend to think that being unhappy leads people to complain, but it is truer to say that complaining leads to people becoming unhappy.</p>
+  </div>
+</section>
+
+<section class="front-section news">
+  <div class="contain">
+    <h2>Sample News Announcement</h2>
+    <p>The next beta for Drupal 8 will be <a href="https://groups.drupal.org/node/456108">beta 7</a>. It is scheduled for release on Wednesday, <strong>February 25</strong>, 2015</p>
+    <img class="drupal-logo inject-svg" data-src="themes/monoset/images/drupal-logo.svg" alt="drupal 8">
+  </div>
+</section>
+
+  <section class="front-section featured">
+    <div class="left-half">
+      <h2>Featured  Content Item</h2>
+      <p>The only true happiness comes from squandering ourselves for a purpose. No man chooses evil because it is evil; he only mistakes it for happiness, the good he seeks. All happy people are grateful. Ungrateful people cannot be happy. We tend to think that being unhappy leads people to complain, but it is truer to say that complaining leads to people becoming unhappy.</p>
+    </div>
+    <div class="right-half">
+      <h2>Another Featured Content Item</h2>
+      <p>Happiness does not depend on outward things, but on the way we see them. Persons thankful for the little things are certain to be the ones with much to be thankful for. To forgive is the highest, most beautiful form of love. In return, you will receive untold peace and happiness. We act as though comfort and luxury were the chief requirements of life, when all that we need to make us happy is something to be enthusiastic about</p>
+    </div>
+  </section>
+
+  <section class="front-section source">
+    <div class="contain">
+      <h2>Source Code</h2>
+      <p>Handcrafted with <img class="heart inject-svg" data-src="themes/monoset/icons/heart.svg" alt="heart">
+        by <a href="https://twitter.com/zetagraph">zetagraph</a> &middot;  Sponsored by <a href="http://www.appnovation.com">Appnovation.com</a></p>
+      <div class="source-code-container">
+        <a href="https://github.com/zetagraph/monoset">
+          <img class="source-code inject-svg" data-src="themes/monoset/icons/github-circle.svg" alt="github">
+        </a>
+      </div>
+      </div>
+    </section>
+
+</div>
+
+{% else %}
+
+<!-- Main Content -->
+
+<div class="content contain">
+  {% if secondary_local_tasks %}
+  <div class="tabs-secondary clearfix" role="navigation">{{ secondary_local_tasks }}</div>
+  {% endif %}
+
+  {{ title_prefix }}
+  {% if title %}
+  <h1 class="page-title">{{ title }}</h1>
+  {% endif %}
+  {{ title_suffix }}
+  {% if primary_local_tasks %}
+  {{ primary_local_tasks }}
+  {% endif %}
+
+  <main class="page-content" role="main">
+    <div class="visually-hidden"><a id="main-content" tabindex="-1"></a></div>
+    {{ messages }}
+    {% if page.help %}
+    <div class="help">
+      {{ page.help }}
+    </div>
+    {% endif %}
+    {% if action_links %}
+    <ul class="action-links">
+      {{ action_links }}
+    </ul>
+    {% endif %}
+
+    {{ page.content }}
+
+    {% endif %}
+
+  </main>
+</div>
 </div>
 <footer class="footer-main">
   <div class="contain">
     {% if page.footer %}
     {{ page.footer }}
     {% endif %}
+   <a class="top-link" href="#top"><img class="arrow-up inject-svg" data-src="/themes/monoset/icons/chevron-up.svg" alt="chevron-up"></a>
+
+
   </div>
 </footer>

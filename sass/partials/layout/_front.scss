@@ -1,0 +1,17 @@
+/**
+*
+* Front
+*
+**/
+
+.front {
+    padding: 3.8rem 0 0 0;
+    @include breakpoint(md) {
+        padding: 0;
+    }
+}
+
+.front-section {
+    position: relative;
+    z-index: 1;
+}

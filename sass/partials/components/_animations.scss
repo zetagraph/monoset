@@ -4,14 +4,7 @@
 *
 **/
 
-.fadein {
-    opacity: 0;
-    animation: fadeIn ease-in 1;
-    animation-fill-mode: forwards;
-    animation-duration: .5s;
-}
-
-// Key Frames
+// FadeIn
 
 @keyframes fadeIn {
     from {
@@ -22,16 +15,8 @@
     }
 }
 
-@keyframes fadeInopacity {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
 
-// Custom Animations
+// BlurIn
 
 @keyframes blurIn {
     from {
@@ -41,5 +26,20 @@
     to {
         opacity: 1;
         filter: blur(0);
+    }
+}
+
+
+// Pulsate
+
+@keyframes pulsate {
+    0% {
+        opacity: 0.0;
+    }
+    50% {
+        opacity: 1.0;
+    }
+    100% {
+        opacity: 0.0;
     }
 }

@@ -2,7 +2,7 @@ global:
   version: VERSION
   css:
     theme:
-      styles/main.css: { }
+      styles/main.css: { weight: -1 }
 
   js:
     scripts/main.js: { scope: footer, weight: -6 }
@@ -23,7 +23,12 @@ vendor:
     scripts/vendor/prism.js: { scope: footer , weight: -10 }
 
 
-test-custom:
+front-page:
   version: VERSION
+  css:
+    theme:
+      styles/vendor/animate.css: { weight: -2 }
   js:
-    scripts/vendor/test-custom.js: { scope: footer, weight: -9 }
+    scripts/vendor/wow.min.js: { scope: footer, weight: -5 }
+    scripts/front.js: { scope: footer, weight: -4 }
+

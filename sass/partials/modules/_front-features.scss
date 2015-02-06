@@ -1,0 +1,34 @@
+/**
+*
+* Front Features
+*
+**/
+
+.features {
+    background: $white;
+    border-top: 1px solid $grey-200;
+    border-bottom: 1px solid $grey-200;
+    padding: 6rem 0;
+    h2 {
+        text-align: center;
+        @include font-size(40px);
+        margin: 0 0 4rem 0;
+    }
+    .feature-list {
+        list-style-type: none;
+        text-align-last: left;
+    }
+    li {
+        float: left;
+        vertical-align: top;
+        @include font-size(17px);
+        width: 33.3333%;
+        margin: 0 0 2rem 0;
+        &:hover .checkbox {
+            fill: $blue;
+        }
+        .checkbox {
+            fill: $grey-400;
+        }
+    }
+}

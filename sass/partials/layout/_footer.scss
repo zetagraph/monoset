@@ -6,7 +6,19 @@
 
 .footer-main {
     padding: 1rem 0;
-    background: $grey-50;
-    border-top: 1px solid $grey-100;
+    background: $grey-100;
+    border-top: 1px solid $grey-200;
     @include font-size(14px);
+    .region-footer {
+        float: left;
+    }
+    .top-link {
+        display: block;
+        width: 32px;
+        float: right;
+    }
+    .arrow-up {
+        widht: 32px;
+        fill: $grey-700;
+    }
 }

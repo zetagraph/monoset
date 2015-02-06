@@ -1,0 +1,36 @@
+/**
+*
+* Front Posts
+*
+**/
+
+.posts {
+    background: $white;
+    border-bottom: 1px solid $grey-200;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    position: relative;
+    .box {
+        display: table-cell;
+        width: 33.333333%;
+        padding: 3rem;
+        border-right: 1px solid $grey-200;
+        transition: all .3s;
+        &:last-child {
+            border: none;
+        }
+        &:hover {
+            background: $blue;
+        }
+        &:hover p,
+        &:hover h2 {
+            color: $white;
+        }
+    }
+    h2 {
+        @include font-size(30px);
+        margin: 0 0 2rem 0;
+        line-height: 1;
+    }
+}
