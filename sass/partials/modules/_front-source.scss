@@ -6,14 +6,22 @@
 
 .source {
     background: $white;
-    padding: 6rem 0;
     text-align: center;
+    padding: 3rem 0;
+    @include breakpoint(md) {
+        padding: 5rem 0;
+    }
+
     h2 {
+        text-align: center;
         @include font-size(40px);
         margin: 0 0 1rem 0;
+        @include breakpoint(md) {
+            @include font-size(50px);
+        }
     }
     p {
-      @include font-size(20px);
+        @include font-size(20px);
     }
     .source-code {
         width: 64px;

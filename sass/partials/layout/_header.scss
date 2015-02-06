@@ -5,48 +5,44 @@
 **/
 
 .header-main {
-    display: none;
+    position: relative;
+    height: 3.8rem;
+    border-bottom: solid 1px $grey-200;
     @include breakpoint(md) {
-        display: block;
         position: fixed;
         z-index: 100;
         top: 0;
         width: 100%;
-        height: 3.8rem;
         padding: 1rem 0;
         background: $white;
-        border-bottom: solid 1px $grey-200;
-        &.sticky {
-            background: $white;
+    }
+
+    // Front Page Header Tweaks
+    .path-frontpage & {
+        border: none;
+        background: none;
+        transition: all .5s ease-in-out;
+        .menu li a {
+            color: $grey-600;
+        }
+    }
+    &.sticky {
+        background: rgba($white, 0.9);
+        box-shadow: 0 2px 5px rgba($black, 0.25);
+        .menu li a {
+            color: $grey-500;
         }
     }
 }
 
-.path-frontpage .header-main {
-    border: none;
-    background: none;
-    transition: all .5s ease-in-out;
-}
-
-.path-frontpage .header-main.sticky {
-    border: none;
-    background: rgba($white, 0.9);
-    box-shadow: 0 2px 5px rgba($black, 0.25);
-}
-
-.path-frontpage .header-main .menu li a {
-    color: $grey-600;
-}
-
-.path-frontpage .header-main.sticky .menu li a {
-    color: $black;
-}
-
 .logo {
-    float: left;
-    width: 20px;
-    height: 26px;
-    display: block;
+    display: none;
+    @include breakpoint(md) {
+        display: block;
+        float: left;
+        width: 20px;
+        height: 26px;
+    }
 }
 
 .logo-svg {
@@ -58,25 +54,28 @@
 }
 
 .header-main .menu {
-    margin: 3px 0 0 0;
-    float: right;
+    display: none;
+    @include breakpoint(md) {
+        display: block;
+        margin: 3px 0 0 0;
+        float: right;
+    }
 }
 
 .header-main .menu li {
     display: inline;
-    margin: 0  1rem 0 0;
+    margin: 0  1.5rem 0 0;
     &:last-child {
         margin: 0;
     }
     a {
         display: inline-block;
         @include font-size(14px);
-        // font-family: $fontHighlight;
-        font-weight: $bold;
+        font-weight: $medium;
         text-transform: uppercase;
-        color: $grey-600;
+        color: $grey-500;
         &:hover {
-            color: $red;
+            color: $blue;
         }
     }
 }

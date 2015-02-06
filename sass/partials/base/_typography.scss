@@ -12,11 +12,6 @@ body {
     font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    // font-family: $fontHighlight;
-    // font-weight: $ultra-bold;
-}
-
 .content {
     h1, h2, h3, h4, h5, h6, hgroup,
     ul, ol, dl,
@@ -31,14 +26,18 @@ h1, h2, h3, h4, h5, h6 {
 
 .content {
     h1 {
-        @include font-size(60px);
-        line-height: .9;
-        margin-bottom: 2rem;
+        @include font-size(50px);
+        line-height: 1;
+        margin: 0 0 1rem 0;
+        @include breakpoint(md) {
+            @include font-size(60px);
+            margin: 0 0 2rem 0;
+        }
     }
 }
 
 p {
-    margin-bottom: 2rem;
+    margin: 0 0 2rem 0;
 }
 
 h2 {
@@ -94,6 +93,11 @@ blockquote::after {
 
 pre {
     white-space: pre-wrap;
+}
+
+.large {
+    font-weight: $normal;
+    color: $grey-800;
 }
 
 @font-face {

@@ -12,11 +12,17 @@
     width: 100%;
     position: relative;
     .box {
-        display: table-cell;
-        width: 33.333333%;
-        padding: 3rem;
-        border-right: 1px solid $grey-200;
         transition: all .3s;
+        padding: 2rem 1rem;
+        border-bottom: 1px solid $grey-200;
+        @include breakpoint(md) {
+            display: table-cell;
+            width: 33.333333%;
+            padding: 3rem;
+            border-right: 1px solid $grey-200;
+            border-bottom: none;
+        }
+
         &:last-child {
             border: none;
         }
@@ -32,5 +38,8 @@
         @include font-size(30px);
         margin: 0 0 2rem 0;
         line-height: 1;
+    }
+    p {
+      color: $grey-700;
     }
 }

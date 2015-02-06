@@ -10,15 +10,17 @@
     border-top: 1px solid $grey-200;
     @include font-size(14px);
     .region-footer {
+        margin: 5px 0 0 0;
         float: left;
     }
     .top-link {
         display: block;
-        width: 32px;
         float: right;
     }
     .arrow-up {
-        widht: 32px;
+        margin: 0 0 -7px 0;
+        width: 32px;
+        height: 32px;
         fill: $grey-700;
     }
 }

@@ -19,12 +19,11 @@
 }
 
 .content {
-    padding: 3.5rem 1rem;
+    padding: 2rem 1rem;
     @include breakpoint(md) {
         padding: 7rem 0 2rem 0;
-        opacity: 0;
         animation: fadeIn ease-in 1;
         animation-fill-mode: forwards;
-        animation-duration: .5s;
+        animation-duration: .3s;
     }
 }

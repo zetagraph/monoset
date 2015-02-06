@@ -4,9 +4,17 @@
 *
 **/
 
-.node__meta {
-    margin: 0 0 2rem 0;
-    font-family: $fontHighlight;
-    font-style: italic;
-    color: $grey-500;
+.node--type-article {
+    .page-content {
+        @include breakpoint(md) {
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+    .node__meta {
+        margin: 0 0 2rem 0;
+        font-family: $fontHighlight;
+        font-style: italic;
+        color: $grey-500;
+    }
 }
