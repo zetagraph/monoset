@@ -1,17 +1,17 @@
-# Monoset - Free Drupal 8 theme
+Monoset - Free Drupal 8 theme
+
+DEMO: http://subtleshift.net
 
 Uses Node.js, Gulp, BrowserSync for Sass compiling, task running and Browser Syncing.
 
-**Demo**: http://subtleshift.net
 
-
-## Requirements 
+- Requirements 
 
 • Node.js. If you have “homebrew” do: $ brew install node
 
 • Gulp. Install gulp globally with $ npm install gulp -g
 
-## Installation
+- Installation
 
 • CD into the theme directory and run $ npm install to fetch all dependencies.
 
