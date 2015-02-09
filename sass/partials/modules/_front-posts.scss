@@ -11,7 +11,7 @@
     table-layout: fixed;
     width: 100%;
     position: relative;
-    .box {
+    .views-row {
         transition: all .3s;
         padding: 2rem 1rem;
         border-bottom: 1px solid $grey-200;
@@ -29,8 +29,8 @@
         &:hover {
             background: $blue;
         }
-        &:hover p,
-        &:hover h2 {
+        &:hover p a,
+        &:hover h2 a {
             color: $white;
         }
     }
@@ -38,8 +38,11 @@
         @include font-size(30px);
         margin: 0 0 2rem 0;
         line-height: 1;
+        a {
+          color: $black;
+        }
     }
-    p {
+    p a {
       color: $grey-700;
     }
 }

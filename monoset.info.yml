@@ -22,4 +22,7 @@ regions:
   front_three: 'Front Three'
   front_four: 'Front Four'
   front_five: 'Front Five'
+  front_six: 'Front Six'
+  front_seven: 'Front Seven'
+  front_eight: 'Front Eight'
   footer: Footer
