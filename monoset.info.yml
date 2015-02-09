@@ -11,16 +11,15 @@ libraries:
 stylesheets-remove:
   - normalize.css
   - system.theme.css
-  # - system.module.css
-  # - views.module.css
 
 regions:
-  nav: 'Navigation'
+  nav: Navigation
+  content_top: 'Content Top'
   content: Content
-  help: Help
-  page_top: 'Page top'
-  page_bottom: 'Page bottom'
-  sidebar_first: 'First sidebar'
-  footer: 'Footer'
-regions_hidden:
-  - sidebar_first
+  content_bottom: 'Content Bottom'
+  front_one: 'Front One'
+  front_two: 'Front Two'
+  front_three: 'Front Three'
+  front_four: 'Front Four'
+  front_five: 'Front Five'
+  footer: Footer

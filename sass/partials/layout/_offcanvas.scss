@@ -104,14 +104,17 @@
 // Offcanvas Nav
 
 .offcanvas {
-    padding: 2rem 0 0 0;
+    padding: 4rem 0 0 0;
 }
 
 .offcanvas .menu li {
     a {
         display: block;
         padding: 1rem;
-        border-bottom: 1px solid $grey-100;
-        color: $white;
+        border-bottom: 1px solid $grey-900;
+        color: $grey-400;
+        &:hover {
+          color: $white;
+        }
     }
 }

@@ -46,7 +46,7 @@
         }
     }
     h2 {
-        @include font-size(32px);
+        @include font-size(34px);
         margin: 0 0 2rem 0;
         line-height: 1;
         color: $white;
@@ -54,9 +54,5 @@
     p {
         color: $white;
         margin: 0 0 1rem 0;
-        @include breakpoint(md) {
-            @include font-size(17px);
-            line-height: 1.6;
-        }
     }
 }

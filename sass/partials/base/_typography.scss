@@ -12,7 +12,7 @@ body {
     font-smoothing: antialiased;
 }
 
-.content {
+main {
     h1, h2, h3, h4, h5, h6, hgroup,
     ul, ol, dl,
     blockquote, p, address,
@@ -24,7 +24,7 @@ body {
     }
 }
 
-.content {
+main {
     h1 {
         @include font-size(50px);
         line-height: 1;
@@ -93,6 +93,11 @@ blockquote::after {
 
 pre {
     white-space: pre-wrap;
+}
+
+em {
+    font-family: $fontHighlight;
+    font-style: italic;
 }
 
 .large {

@@ -20,10 +20,24 @@
 
 .content {
     padding: 2rem 1rem;
+    min-height: 670px;
     @include breakpoint(md) {
         padding: 7rem 0 2rem 0;
         animation: fadeIn ease-in 1;
         animation-fill-mode: forwards;
         animation-duration: .3s;
     }
+}
+
+.region-content-top {
+    margin: 0 0 2rem 0;
+}
+
+.region-content {
+    margin: 0 0 2rem 0;
+}
+
+.region-content-bottom {
+    padding: 3rem 0;
+    border-top: 1px solid $grey-200;
 }

@@ -67,6 +67,9 @@
 
     <section class="front-section icons">
       <div class="contain">
+        {% if page.front_one %}
+          {{ page.front_one }}
+        {% endif %}
         <h2>Sample Icons</h2>
         <div class="icon-container">
           <div class="icon-box wow fadeIn" data-wow-duration=".5s" data-wow-delay=".3s">
@@ -112,15 +115,16 @@
     </section>
 
     <section class="front-section featured">
-      <div class="featured-box featureed-one">
+      <div class="featured-box">
+        <div class="wow fadeIn" data-wow-duration=".5s" data-wow-delay=".3s">
         <h2>Featured  Content Item</h2>
         <p>If the day and the night are such that you greet them with joy, and life emits a fragrance like flowers and sweet-scented herbs, is more elastic, more starry, more immortal — that is your success. </p><p> We act as though comfort and luxury were the chief requirements of life, when all that we need to make us happy is something to be enthusiastic about.</p>
-
+        </div>
       </div>
-      <div class="featured-box  featureed-two">
+      <div class="featured-box">
+        <div class="wow fadeIn" data-wow-duration=".5s" data-wow-delay=".3s">
         <h2>Another Featured Content Item</h2>
         <p>Happiness does not depend on outward things, but on the way we see them. Persons thankful for the little things are certain to be the ones with much to be thankful for. To forgive is the highest, most beautiful form of love. In return, you will receive untold peace and happiness.</p> <p> We act as though comfort and luxury were the chief requirements of life, when all that we need to make us happy is something to be enthusiastic about.</p>
-
       </div>
     </section>
 
@@ -129,7 +133,7 @@
         <h2>Source Code</h2>
         <p>Handcrafted with <img class="heart inject-svg" data-src="themes/monoset/icons/heart.svg" alt="heart">
           by <a href="https://twitter.com/zetagraph">zetagraph</a> &middot;  Sponsored by <a href="http://www.appnovation.com">Appnovation.com</a></p>
-          <div class="source-code-container">
+          <div class="source-code-container wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".5s">
             <a href="https://github.com/zetagraph/monoset">
               <img class="source-code inject-svg" data-src="themes/monoset/icons/github-circle.svg" alt="github">
             </a>
@@ -171,7 +175,15 @@
         {{ primary_local_tasks }}
         {% endif %}
 
+        {% if page.content_top %}
+          {{ page.content_top }}
+        {% endif %}
+
         {{ page.content }}
+
+        {% if page.content_bottom %}
+          {{ page.content_bottom }}
+        {% endif %}
 
         {% endif %}
 
@@ -183,6 +195,7 @@
       {% if page.footer %}
       {{ page.footer }}
       {% endif %}
+      <a class="twitter" href="https://twitter.com/zetagraph"><img class="twitter-icon inject-svg" data-src="/themes/monoset/icons/twitter.svg" alt="twitter"></a>
       <a class="top-link" href="#top"><img class="arrow-up inject-svg" data-src="/themes/monoset/icons/chevron-up.svg" alt="chevron-up"></a>
     </div>
   </footer>
