@@ -6,11 +6,14 @@
 
 .node--type-article {
     .page-content {
-        @include breakpoint(md) {
-            width: 80%;
-            margin: 0 auto;
-        }
+      margin: 0 auto;
+      padding: 0 1rem;
+      @include breakpoint(md) {
+          width: 80%;
+          padding: 0;
+      }
     }
+
     .node__meta {
         margin: 0 0 2rem 0;
         font-family: $fontHighlight;
