@@ -70,7 +70,7 @@ gulp.task('browser-sync', function() {
     //initialize browsersync
     browserSync.init(files, {
     //browsersync with a php server
-    proxy: "drupal8.dev",
+    proxy: "d8.dev",
     notify: true
     });
 });
