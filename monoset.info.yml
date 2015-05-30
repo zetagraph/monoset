@@ -13,10 +13,10 @@ stylesheets-remove:
   - system.theme.css
 
 regions:
-  nav: Navigation
-  content_top: 'Content Top'
   content: Content
+  content_top: 'Content Top'
   content_bottom: 'Content Bottom'
+  nav: Navigation
   front_one: 'Front One'
   front_two: 'Front Two'
   front_three: 'Front Three'
