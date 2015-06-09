@@ -2,24 +2,33 @@
   "name": "monoset",
   "version": "1.0.1",
   "description": "Drupal 8 Theme",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
+  "author": "Andrei Zvonkov < zvonkov@gmail.com>",
+  "homepage": "http://subtleshift.net",
+   "repository": {
     "type": "git",
-    "url": "git"
+    "url": "git@github.com:zetagraph/monoset.git"
   },
-  "author": "Andrei Zvonkov",
-  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zetagraph/monoset/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+
   "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-load-plugins": "^1.0.0",
     "browser-sync": "^2.7.5",
-    "gulp": "^3.8.11",
-    "gulp-autoprefixer": "^2.3.0",
-    "gulp-filter": "^2.0.2",
+    "gulp-autoprefixer": "^2.3.1",
     "gulp-notify": "^2.2.0",
     "gulp-sass": "^2.0.1",
     "gulp-shell": "^0.4.1",
     "gulp-sourcemaps": "^1.5.2"
+  },
+  "scripts": {
+    "postinstall": "find ./node_modules/ -name '*.info' -type f -delete"
   }
 }
