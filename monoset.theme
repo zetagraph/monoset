@@ -2,16 +2,19 @@
 
 /**
  * @file
- * Contains theme override and preprocess functions.
+ * Functions to support theming in the Seven theme.
  */
 
-use Drupal\Component\Utility\String;
 use Drupal\Component\Utility\Xss;
-use Drupal\Core\Template\Attribute;
+use Drupal\Component\Utility\SafeMarkup;
+use Drupal\Core\Form\FormStateInterface;
 
+/**
+ * CSS Alter
+ */
 function monoset_css_alter(&$css) {
+  // Add Google fonts.
   $theme_path = drupal_get_path('theme', 'monoset');
-// Add googlefonts.
   $googlefonts = '//fonts.googleapis.com/css?family=Montserrat:700|Roboto:400,100,300,500,700,900';
   $css[$googlefonts] = array(
     'data' => $googlefonts,
@@ -22,13 +25,15 @@ function monoset_css_alter(&$css) {
     'group' => CSS_AGGREGATE_THEME,
     'browsers' => array('IE' => TRUE, '!IE' => TRUE),
     'weight' => -1,
-  );
+    );
 }
 
-// Load only on Front Page
-
+/**
+ * Implements hook_preprocess_page().
+ */
 function monoset_preprocess_page(&$variables) {
-  if($variables['is_front']){
+  // Load this library only on front page.
+  if ($variables['is_front']) {
     $variables['#attached']['library'][] = 'monoset/front-page';
   }
 }
