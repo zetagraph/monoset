@@ -9,8 +9,8 @@ libraries:
  - monoset/vendor
 
 stylesheets-remove:
-  - normalize.css
-  - system.theme.css
+  - core/assets/vendor/normalize-css/normalize.css
+  - core/modules/system/css/system.theme.css
 
 regions:
   content: Content
