@@ -29,10 +29,18 @@
         &:hover {
             background: $blue;
         }
+        &:hover .date,
         &:hover p a,
         &:hover h2 a {
             color: $white;
         }
+    }
+    .date {
+      font-family: $fontHighlight;
+      font-style: italic;
+      @include font-size(14px);
+      margin: 0 0 1rem 0;
+      color: $black;
     }
     h2 {
         @include font-size(30px);

@@ -4,28 +4,32 @@
 *
 **/
 
-// Cover
-
 .cover {
     width: 100%;
     height: 100vh;
-    background: url(../images/cover.jpg) no-repeat center center;
+    background: url(../images/cover.jpg) no-repeat 0 0;
+    border-radius: 4px;
+    box-shadow: 5px 1px 0px 1px #f04e29; 
     background-size: cover;
     animation: blurIn 1.5s;
-    @include breakpoint(md) {
-        background-attachment: fixed;
+    display: flex;
+    .no-touch & {
+        @include breakpoint(md) {
+            background-attachment: fixed;
+        }
     }
-
     .cover-title {
         text-align: center;
         margin: 40% 0 0 0;
-        @include breakpoint(md) {
-            position: fixed;
-            top: 40%;
-            left: 50%;
-            width: 100%;
-            transform: translate(-51%, 0);
-            margin: 0;
+        .no-touch & {
+            @include breakpoint(md) {
+                position: fixed;
+                top: 40%;
+                left: 50%;
+                width: 100%;
+                transform: translate(-51%, 0);
+                margin: 0;
+            }
         }
     }
     h1 {

@@ -1,4 +1,11 @@
-<header class="header-main">
+{#
+/**
+ * @file
+ * Default theme implementation to display a single Drupal page.
+ */
+ #}
+
+ <header class="header-main">
   <div class="menu-btn open" aria-hidden="true">&#9776; Menu</div>
   <div class="contain">
     <a  class ="logo" href="{{ front_page }}" title="{{ site_name }} » {{ site_slogan }}">
@@ -14,7 +21,7 @@
       </svg>
     </a>
     {% if page.nav %}
-    {{ page.nav }}
+      {{ page.nav }}
     {% endif %}
   </div>
 </header>
@@ -22,7 +29,7 @@
 <div class="offcanvas pushy pushy-left">
   <div class="menu-btn close" aria-hidden="true">&#10005; Menu</div>
   {% if page.nav %}
-  {{ page.nav }}
+    {{ page.nav }}
   {% endif %}
 </div>
 
@@ -33,64 +40,64 @@
   <!-- Front Page -->
 
   {% if is_front %}
-  <div class="front">
+    <div class="front">
 
-    <section class="cover">
-      <div class="contain">
-        {% if page.front_one %}
-        {{ page.front_one }}
-        {% endif %}
-      </div>
-    </section>
+      <section class="cover">
+        <div class="contain">
+          {% if page.front_one %}
+            {{ page.front_one }}
+          {% endif %}
+        </div>
+      </section>
 
-    <section id="features" class="front-section features">
-      <div class="contain">
-        {% if page.front_two %}
-        {{ page.front_two }}
-        {% endif %}
-      </div>
-    </section>
+      <section id="features" class="front-section features">
+        <div class="contain">
+          {% if page.front_two %}
+            {{ page.front_two }}
+          {% endif %}
+        </div>
+      </section>
 
-    <section class="front-section icons">
-      <div class="contain">
-        {% if page.front_three %}
-        {{ page.front_three }}
-        {% endif %}
-      </div>
-    </section>
+      <section class="front-section icons">
+        <div class="contain">
+          {% if page.front_three %}
+            {{ page.front_three }}
+          {% endif %}
+        </div>
+      </section>
 
-    <section class="front-section posts">
-      {% if page.front_four %}
-      {{ page.front_four }}
-      {% endif %}
-    </section>
+      <section class="front-section posts">
+        {% if page.front_four %}
+          {{ page.front_four }}
+        {% endif %}
+      </section>
 
-    <section class="front-section news">
-      <div class="contain">
-        {% if page.front_five %}
-        {{ page.front_five }}
-        {% endif %}
-      </div>
-    </section>
+      <section class="front-section news">
+        <div class="contain">
+          {% if page.front_five %}
+            {{ page.front_five }}
+          {% endif %}
+        </div>
+      </section>
 
-    <section class="front-section featured">
-      <div class="featured-box">
-        {% if page.front_six %}
-        {{ page.front_six }}
-        {% endif %}
-      </div>
-      <div class="featured-box">
-        {% if page.front_seven %}
-        {{ page.front_seven }}
-        {% endif %}
-      </div>
-    </section>
+      <section class="front-section featured">
+        <div class="featured-box">
+          {% if page.front_six %}
+            {{ page.front_six }}
+          {% endif %}
+        </div>
+        <div class="featured-box">
+          {% if page.front_seven %}
+            {{ page.front_seven }}
+          {% endif %}
+        </div>
+      </section>
 
-    <section class="front-section source">
-      <div class="contain">
-        {% if page.front_eight %}
-        {{ page.front_eight }}
-        {% endif %}
+      <section class="front-section source">
+        <div class="contain">
+          {% if page.front_eight %}
+            {{ page.front_eight }}
+          {% endif %}
         </div>
       </section>
 
@@ -99,33 +106,36 @@
     {% else %}
 
     <!-- Main Content -->
-
     <div class="content contain">
       <main class="page-content" role="main">
         <div class="visually-hidden"><a id="main-content" tabindex="-1"></a></div>
         {{ messages }}
         {% if page.help %}
-        <div class="help">
-          {{ page.help }}
-        </div>
+          <div class="help">
+            {{ page.help }}
+          </div>
         {% endif %}
         {% if action_links %}
-        <ul class="action-links">
-          {{ action_links }}
-        </ul>
+          <ul class="action-links">
+            {{ action_links }}
+          </ul>
         {% endif %}
 
         {% if secondary_local_tasks %}
-        <div class="tabs-secondary clearfix" role="navigation">{{ secondary_local_tasks }}</div>
+          <div class="tabs-secondary clearfix" role="navigation">{{ secondary_local_tasks }}</div>
         {% endif %}
+
+        {# {{ kint() }} #}
+        {# {{ kint(page) }} #}
+        {# Requiters Devel Module  #}
 
         {{ title_prefix }}
         {% if title %}
-        <h1 class="page-title">{{ title }}</h1>
+          <h1 class="page-title">{{ title }}</h1>
         {% endif %}
         {{ title_suffix }}
         {% if primary_local_tasks %}
-        {{ primary_local_tasks }}
+          {{ primary_local_tasks }}
         {% endif %}
 
         {% if page.content_top %}
@@ -138,17 +148,17 @@
           {{ page.content_bottom }}
         {% endif %}
 
-        {% endif %}
-
-      </main>
-    </div>
-  </div>
-  <footer class="footer-main">
-    <div class="contain">
-      {% if page.footer %}
-      {{ page.footer }}
       {% endif %}
-      <a class="twitter" href="https://twitter.com/zetagraph"><img class="twitter-icon inject-svg" data-src="/themes/monoset/icons/twitter.svg" alt="twitter"></a>
-      <a class="top-link" href="#top"><img class="arrow-up inject-svg" data-src="/themes/monoset/icons/chevron-up.svg" alt="chevron-up"></a>
-    </div>
-  </footer>
+
+    </main>
+  </div>
+</div>
+<footer class="footer-main">
+  <div class="contain">
+    {% if page.footer %}
+      {{ page.footer }}
+    {% endif %}
+    <a class="twitter" href="https://twitter.com/zetagraph"><img class="twitter-icon inject-svg" data-src="/themes/monoset/icons/twitter.svg" alt="twitter"></a>
+    <a class="top-link" href="#top"><img class="arrow-up inject-svg" data-src="/themes/monoset/icons/chevron-up.svg" alt="chevron-up"></a>
+  </div>
+</footer>
