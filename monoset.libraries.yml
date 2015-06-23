@@ -1,8 +1,9 @@
 global:
-  version: VERSION
+  version: 1.x
   css:
     theme:
       styles/main.css: { weight: -1 }
+ #   styles/print.css: { media: print }
 
   js:
     scripts/main.js: { scope: footer, weight: -6 }
@@ -15,20 +16,18 @@ global:
     - core/modernizr
 
 vendor:
-  version: VERSION
+  version: 1.x
   js:
     scripts/vendor/pushy.js: { scope: footer, weight: -7 }
     scripts/vendor/fastclick.js: { scope: footer , weight: -8 }
     scripts/vendor/svg-injector.min.js: { scope: footer , weight: -9 }
     scripts/vendor/prism.js: { scope: footer , weight: -10 }
 
-
 front-page:
-  version: VERSION
+  version: 1.x
   css:
     theme:
       styles/vendor/animate.css: { weight: -2 }
   js:
     scripts/vendor/wow.min.js: { scope: footer, weight: -5 }
     scripts/front.js: { scope: footer, weight: -4 }
-
