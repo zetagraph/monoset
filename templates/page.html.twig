@@ -106,7 +106,6 @@
     {% else %}
 
     <!-- Main Content -->
-
     <div class="content contain">
       <main class="page-content" role="main">
         <div class="visually-hidden"><a id="main-content" tabindex="-1"></a></div>
@@ -125,6 +124,10 @@
         {% if secondary_local_tasks %}
           <div class="tabs-secondary clearfix" role="navigation">{{ secondary_local_tasks }}</div>
         {% endif %}
+
+        {# {{ kint() }} #}
+        {# {{ kint(page) }} #}
+        {# Requiters Devel Module  #}
 
         {{ title_prefix }}
         {% if title %}
