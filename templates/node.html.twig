@@ -1,16 +1,15 @@
 {#
 /**
  * @file
- * Bartik's theme implementation to display a node.
+ * Theme override to display a node.
  *
  * Available variables:
  * - node: Full node entity.
  *   - id: The node ID.
  *   - bundle: The type of the node, for example, "page" or "article".
  *   - authorid: The user ID of the node author.
- *   - createdtime: Formatted creation date. Preprocess functions can
- *     reformat it by calling format_date() with the desired parameters on
- *     $variables['node']->getCreatedTime().
+ *   - createdtime: Time the node was published formatted in Unix timestamp.
+ *   - changedtime: Time the node was changed formatted in Unix timestamp.
  * - label: The title of the node.
  * - content: All node items. Use {{ content }} to print them all,
  *   or print a subset such as {{ content.field_example }}. Use
@@ -60,6 +59,10 @@
  *   is an administrator.
  *
  * @see template_preprocess_node()
+ *
+ * @todo Remove the id attribute (or make it a class), because if that gets
+ *   rendered twice on a page this is invalid CSS for example: two lists
+ *   in different view modes.
  */
 #}
 {%
@@ -70,33 +73,36 @@
     node.isSticky() ? 'node--sticky',
     not node.isPublished() ? 'node--unpublished',
     view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-    'clearfix',
   ]
 %}
 <article{{ attributes.addClass(classes) }}>
-  <header>
-    {{ title_prefix }}
-    {% if not page %}
-      <h2{{ title_attributes.addClass('node__title') }}>
-        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-      </h2>
-    {% endif %}
-    {{ title_suffix }}
-    {% if display_submitted %}
-      <div class="node__meta">
-        {{ author_picture }}
-        <span{{ author_attributes }}>
-          {% trans %}Submitted by {{ author_name|passthrough }} on {{ date|passthrough }}{% endtrans %}
-        </span>
+
+  {{ title_prefix }}
+  {% if not page %}
+    <h2{{ title_attributes }}>
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h2>
+  {% endif %}
+  {{ title_suffix }}
+
+  {% if display_submitted %}
+    <footer class="node__meta">
+      {{ author_picture }}
+      <div{{ author_attributes.addClass('node__submitted') }}>
+        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
         {{ metadata }}
       </div>
-    {% endif %}
-  </header>
-  <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
-    {{ content|without('comment', 'links') }}
-  </div>
-  {% if content.links %}
-    <div class="node__links">{{ content.links }}</div>
+    </footer>
   {% endif %}
-  {{ content.comment }}
+
+  <div{{ content_attributes.addClass('node__content') }}>
+    {{ content|without('links') }}
+  </div>
+
+  {% if content.links %}
+    <div class="node__links">
+      {{ content.links }}
+    </div>
+  {% endif %}
+
 </article>
