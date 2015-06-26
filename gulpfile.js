@@ -39,6 +39,12 @@ gulp.task('sass', function() {
     }));
 });
 
+// process JS files and return the stream.
+gulp.task('js', function () {
+    return gulp.src('scripts/**/*.js')
+        .pipe(gulp.dest('scripts'));
+});
+
 // Optimize Images
 gulp.task('images', function() {
   return gulp.src('images/**/*')
@@ -68,7 +74,7 @@ gulp.task('jshint', function() {
     }));
 });
 
-// Beautify JS 
+// Beautify JS
 gulp.task('beautify', function() {
   gulp.src('scripts/*.js')
     .pipe($.beautify({indentSize: 2}))

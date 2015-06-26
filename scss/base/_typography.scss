@@ -5,110 +5,110 @@
 **/
 
 body {
-    font-family: $fontDefault;
-    font-weight: $thin;
-    color: $black;
-    line-height: 1.5;
-    font-smoothing: antialiased;
+  font-family: $fontDefault;
+  font-weight: $thin;
+  color: $black;
+  line-height: 1.5;
+  font-smoothing: antialiased;
 }
 
 main {
-    h1, h2, h3, h4, h5, h6, hgroup,
-    ul, ol, dl,
-    blockquote, p, address,
-    table,
-    form,
-    pre,
-    hr {
-        margin-bottom: 2rem;
-    }
+  h1, h2, h3, h4, h5, h6,
+  ul, ol, dl,
+  blockquote, p, address,
+  table,
+  form,
+  pre,
+  hr {
+    margin-bottom: 2rem;
+  }
 }
 
 main {
-    h1 {
-        @include font-size(50px);
-        line-height: 1;
-        margin: 0 0 1rem 0;
-        @include breakpoint(md) {
-            @include font-size(60px);
-            margin: 0 0 2rem 0;
-        }
+  h1 {
+    @include font-size(50px);
+    line-height: 1;
+    margin: 0 0 1rem 0;
+    @include breakpoint(md) {
+      @include font-size(60px);
+      margin: 0 0 2rem 0;
     }
+  }
 }
 
 p {
-    margin: 0 0 2rem 0;
+  margin: 0 0 2rem 0;
 }
 
 h2 {
-    @include font-size(48px);
-    line-height: .9;
-    margin: 0 0 2rem 0;
+  @include font-size(48px);
+  line-height: .9;
+  margin: 0 0 2rem 0;
 }
 
 h3 {
-    @include font-size(36px);
+  @include font-size(36px);
 }
 
 h4 {
-    @include font-size(24px);
+  @include font-size(24px);
 }
 
 h5 {
-    @include font-size(20px);
+  @include font-size(20px);
 }
 
 h6 {
-    @include font-size(16px);
+  @include font-size(16px);
 }
 
 strong {
-    font-weight: $normal;
+  font-weight: $normal;
 }
 
 blockquote {
-    display: block;
-    padding: 1rem 3rem 1rem 2.5rem;
-    position: relative;
-    font-family: $fontHighlight;
-    @include font-size(20px);
-    line-height: 1.2;
-    font-style: italic;
+  display: block;
+  padding: 1rem 3rem 1rem 2.5rem;
+  position: relative;
+  font-family: $fontHighlight;
+  @include font-size(20px);
+  line-height: 1.2;
+  font-style: italic;
 }
 
 blockquote::before {
-    content: "\201C";
-    @include font-size(60px);
-    font-weight: $bold;
-    color: $grey-400;
-    font-style: normal;
-    position: absolute;
-    left: 0;
-    top: 5px;
+  content: "\201C";
+  @include font-size(60px);
+  font-weight: $bold;
+  color: $grey-400;
+  font-style: normal;
+  position: absolute;
+  left: 0;
+  top: 5px;
 }
 
 blockquote::after {
-    content: "";
+  content: "";
 }
 
 pre {
-    white-space: pre-wrap;
+  white-space: pre-wrap;
 }
 
 em {
-    font-family: $fontHighlight;
-    font-style: italic;
+  font-family: $fontHighlight;
+  font-style: italic;
 }
 
 .large {
-    font-weight: $normal;
-    color: $grey-800;
+  font-weight: $normal;
+  color: $grey-800;
 }
 
 @font-face {
-    font-family: "responsivenav";
-    src: url("../icons/responsivenav.eot");
-    src: url("../icons/responsivenav.eot?#iefix") format("embedded-opentype"), url("../icons/responsivenav.ttf") format("truetype"), url("../icons/responsivenav.woff") format("woff"), url("../icons/responsivenav.svg#responsivenav") format("svg");
-    font-weight: normal;
-    font-style: normal;
+  font-family: "responsivenav";
+  src: url("../icons/responsivenav.eot");
+  src: url("../icons/responsivenav.eot?#iefix") format("embedded-opentype"), url("../icons/responsivenav.ttf") format("truetype"), url("../icons/responsivenav.woff") format("woff"), url("../icons/responsivenav.svg#responsivenav") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }

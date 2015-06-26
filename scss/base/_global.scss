@@ -5,19 +5,19 @@
 **/
 
 html, body {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *, *:before, *:after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 ::selection {
-    background: $blue;
-    color: $white;
+  background: $blue;
+  color: $white;
 }
