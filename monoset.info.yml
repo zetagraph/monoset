@@ -1,5 +1,6 @@
 name: Monoset
 type: theme
+# base theme: classy
 description: Drupal 8 Theme
 version: 1.0
 core: 8.x
