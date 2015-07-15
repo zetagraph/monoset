@@ -1,9 +1,9 @@
+#  Global library
 global:
   version: 1.x
   css:
     theme:
       styles/main.css: { weight: -1 }
- #   styles/print.css: { media: print }
 
   js:
     scripts/main.js: { scope: footer, weight: -6 }
@@ -15,6 +15,7 @@ global:
     - core/jquery.once
     - core/modernizr
 
+#Vendor Library
 vendor:
   version: 1.x
   js:
@@ -23,6 +24,7 @@ vendor:
     scripts/vendor/svg-injector.min.js: { scope: footer , weight: -9 }
     scripts/vendor/prism.js: { scope: footer , weight: -10 }
 
+# Front Page Library
 front-page:
   version: 1.x
   css:
