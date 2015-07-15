@@ -4,7 +4,6 @@ global:
   css:
     theme:
       styles/main.css: { weight: -1 }
- #   styles/print.css: { media: print }
 
   js:
     scripts/main.js: { scope: footer, weight: -6 }
