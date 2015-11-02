@@ -15,9 +15,9 @@
 @import "base/typography";
 
 // Components
-@import "components/lists";
 @import "components/links";
 @import "components/drupal-overrides";
+@import "components/form-elements.scss";
 @import "components/animations";
 @import "components/prism";
 
@@ -25,7 +25,6 @@
 @import "layout/layout";
 @import "layout/header";
 @import "layout/footer";
-@import "layout/forms";
 @import "layout/offcanvas";
 @import "layout/front";
 
