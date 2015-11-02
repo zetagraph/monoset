@@ -4,7 +4,7 @@
   "description": "Drupal 8 Theme",
   "author": "Andrei Zvonkov < zvonkov@gmail.com>",
   "homepage": "http://subtleshift.net",
-   "repository": {
+  "repository": {
     "type": "git",
     "url": "git@github.com:zetagraph/monoset.git"
   },
@@ -17,22 +17,21 @@
       "url": "http://opensource.org/licenses/MIT"
     }
   ],
-
   "devDependencies": {
-    "gulp": "^3.9.0",
-    "gulp-load-plugins": "^1.0.0",
     "browser-sync": "^2.7.5",
+    "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",
+    "gulp-beautify": "^1.1.2",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-jshint": "^1.11.0",
+    "gulp-load-plugins": "^1.0.0",
     "gulp-notify": "^2.2.0",
     "gulp-sass": "^2.0.1",
     "gulp-shell": "^0.4.1",
     "gulp-sourcemaps": "^1.5.2",
-    "gulp-imagemin": "^2.2.1",
-    "gulp-jshint": "^1.11.0",
-    "jshint-stylish": "^2.0.0",
     "gulp-uglify": "^1.2.0",
-    "gulp-beautify": "^1.1.2"
-
+    "jshint-stylish": "^2.0.0",
+    "sc5-styleguide": "^0.3.37"
   },
   "scripts": {
     "postinstall": "find ./node_modules/ -name '*.info' -type f -delete"
