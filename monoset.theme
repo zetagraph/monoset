@@ -10,25 +10,6 @@ use Drupal\Component\Utility\SafeMarkup;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * CSS Alter
- */
-function monoset_css_alter(&$css) {
-  // Add Google fonts.
-  $theme_path = drupal_get_path('theme', 'monoset');
-  $googlefonts = '//fonts.googleapis.com/css?family=Montserrat:700|Roboto:400,100,300,500,700,900';
-  $css[$googlefonts] = array(
-    'data' => $googlefonts,
-    'type' => 'external',
-    'every_page' => TRUE,
-    'media' => 'all',
-    'preprocess' => FALSE,
-    'group' => CSS_AGGREGATE_THEME,
-    'browsers' => array('IE' => TRUE, '!IE' => TRUE),
-    'weight' => -1,
-    );
-}
-
-/**
  * Implements hook_preprocess_page().
  */
 function monoset_preprocess_page(&$variables) {
