@@ -4,6 +4,9 @@ var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
+var styleguide = require('sc5-styleguide');
+var sass = require('gulp-sass');
+var outputPath = 'styleguide';
 
 // Error notifications
 var reportError = function(error) {
@@ -130,8 +133,38 @@ gulp.task('browser-sync', function() {
   });
 });
 
+// Styleguide Generator with SC5: https://github.com/SC5/sc5-styleguide
+gulp.task('styleguide:generate', function() {
+  return gulp.src('scss/**/*.scss')
+    .pipe(styleguide.generate({
+        title: 'Monoset Styleguide',
+        server: true,
+        port: 3005,
+        rootPath: outputPath,
+        overviewPath: 'README.md',
+        // extraHead: [
+        //   '<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900">',
+        // ],
+        disableEncapsulation: true,
+        disableHtml5Mode: true
+      }))
+    .pipe(gulp.dest(outputPath));
+});
+
+gulp.task('styleguide:applystyles', function() {
+  return gulp.src('styleguide/main.scss')
+    .pipe(sass({
+      errLogToConsole: true
+    }))
+    .pipe(styleguide.applyStyles())
+    .pipe(gulp.dest(outputPath));
+});
+
+gulp.task('styleguide', ['styleguide:generate', 'styleguide:applystyles']);
+
+
 // Default task to be run with `gulp`
-gulp.task('default', ['sass', 'browser-sync'], function() {
-  gulp.watch("scss/**/*.scss", ['sass']);
+gulp.task('default', ['sass', 'browser-sync', 'styleguide'], function() {
+  gulp.watch("scss/**/*.scss", ['sass', 'styleguide']);
   gulp.watch("scripts/**/*.js", ['js']);
 });
