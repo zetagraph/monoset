@@ -1,0 +1,45 @@
+// Mixins
+
+// Breakpoints
+
+@mixin breakpoint($class) {
+  @if $class == md {
+    @media (min-width: 767px) {
+      @content;
+    }
+  }
+  @else if $class == lg {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+  @else {
+    @warn "Breakpoint mixin supports: md, lg";
+  }
+}
+
+// Clearfix
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// Mixin that will include the fall back px declaration as well as the calculated rem value.
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  transform-style: preserve-3d;
+}

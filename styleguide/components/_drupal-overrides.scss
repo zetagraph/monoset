@@ -1,0 +1,25 @@
+/**
+*
+* Drupal Overrides
+*
+**/
+
+.header-main {
+  .toolbar-fixed & {
+    top: 39px;
+  }
+  .toolbar-fixed.toolbar-tray-open & {
+    top: 79px;
+  }
+}
+
+// Drupal messages
+
+.messages {
+  padding: 1rem;
+  margin: 0 0 2rem;
+  border: 1px solid $grey-200;
+  &.messages--status {
+    border-color: $blue;
+  }
+}
