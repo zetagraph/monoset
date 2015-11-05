@@ -1,0 +1,56 @@
+/**
+*
+* Blog
+*
+**/
+
+.page-blog-view {
+  .views-row {
+    transition: all .3s;
+    padding: 2rem 0;
+    border-bottom: 1px solid $grey-200;
+    @include breakpoint(md) {
+      float: left;
+      width: 50%;
+      height: 340px;
+      overflow: hidden;
+      padding: 2rem 2rem 2rem 0;
+      border-right: 1px solid $grey-200;
+    }
+
+    &:nth-child(even) {
+      @include breakpoint(md) {
+        padding: 2rem 0 2rem 2rem;
+      }
+
+      border-right: none;
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  .date {
+    font-family: $fontHighlight;
+    font-style: italic;
+    @include font-size(14px);
+    margin: 0 0 1rem 0;
+    color: $grey-500;
+  }
+  h2 {
+    @include font-size(30px);
+    margin: 0 0 2rem 0;
+    line-height: 1;
+    a {
+      color: $black;
+    }
+  }
+  p {
+    margin: 0;
+  }
+  a {
+    color: $grey-700;
+    &:hover {
+      color: $red;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+/**
+*
+* Front Posts
+*
+**/
+
+.posts {
+  background: $white;
+  border-bottom: 1px solid $grey-200;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  position: relative;
+  .views-row {
+    transition: all .3s;
+    padding: 2rem 1rem;
+    border-bottom: 1px solid $grey-200;
+    @include breakpoint(md) {
+      display: table-cell;
+      width: 33.333333%;
+      padding: 3rem;
+      border-right: 1px solid $grey-200;
+      border-bottom: none;
+    }
+
+    &:last-child {
+      border: none;
+    }
+    &:hover {
+      background: $blue;
+    }
+    &:hover .date,
+    &:hover p a,
+    &:hover h2 a {
+      color: $white;
+    }
+  }
+  .date {
+    font-family: $fontHighlight;
+    font-style: italic;
+    @include font-size(14px);
+    margin: 0 0 1rem 0;
+    color: $black;
+  }
+  h2 {
+    @include font-size(30px);
+    margin: 0 0 2rem 0;
+    line-height: 1;
+    a {
+      color: $black;
+    }
+  }
+  p a {
+    color: $grey-700;
+  }
+}

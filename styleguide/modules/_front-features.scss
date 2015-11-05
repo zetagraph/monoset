@@ -1,0 +1,52 @@
+/**
+*
+* Front Features
+*
+**/
+
+.features {
+  background: $white;
+  border-top: 1px solid $grey-200;
+  border-bottom: 1px solid $grey-200;
+  padding: 3rem 0;
+  @include breakpoint(md) {
+    padding: 5rem 0;
+  }
+
+  h2 {
+    text-align: center;
+    @include font-size(40px);
+    margin: 0 0 3rem 0;
+    @include breakpoint(md) {
+      @include font-size(50px);
+      margin: 0 0 4rem 0;
+    }
+  }
+  .feature-list li {
+    list-style-type: none;
+    vertical-align: top;
+    text-align: center;
+    margin: 0 0 1rem 0;
+    @include font-size(18px);
+    font-weight: $light;
+    @include breakpoint(md) {
+      margin: 0 0 2rem 0;
+      text-align: left;
+      float: left;
+      width: 33.3333%;
+      @include font-size(17px);
+    }
+
+    &:hover .checkbox {
+      fill: $blue;
+    }
+    .checkbox {
+      display: none;
+      fill: $grey-400;
+      @include breakpoint(md) {
+        margin: 0 5px 0 0;
+        display: inline-block;
+      }
+    }
+  }
+}

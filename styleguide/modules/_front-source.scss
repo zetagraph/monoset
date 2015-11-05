@@ -1,0 +1,38 @@
+/**
+*
+* Front Source
+*
+**/
+
+.source {
+  background: $white;
+  text-align: center;
+  padding: 3rem 0;
+  @include breakpoint(md) {
+    padding: 5rem 0;
+  }
+
+  h2 {
+    text-align: center;
+    @include font-size(40px);
+    margin: 0 0 1rem 0;
+    @include breakpoint(md) {
+      @include font-size(50px);
+    }
+  }
+  p {
+    @include font-size(20px);
+  }
+  .source-code {
+    width: 64px;
+    height: 64px;
+  }
+  .heart {
+    width: 13px;
+    height: 13px;
+    fill: $red;
+    display: inline-block;
+    animation: pulsate 2s linear infinite;
+    opacity: 1;
+  }
+}

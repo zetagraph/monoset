@@ -1,0 +1,19 @@
+// Links
+//
+// Styleguide 3.0
+//
+// markup:
+// <a href="#">Sample Link</a>
+
+a {
+  color: $red;
+  transition: .5s;
+  text-decoration: none;
+  &:hover {
+    color: darken($red, 20);
+  }
+  &:visited {
+    text-decoration: none;
+    outline: 0;
+  }
+}

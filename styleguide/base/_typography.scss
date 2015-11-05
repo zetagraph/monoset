@@ -1,0 +1,189 @@
+// Typography
+//
+// Roboto & Georgia
+//
+// Roboto Font: https://www.google.com/fonts/specimen/Roboto
+//
+// Styleguide 1.0
+
+// Type Weights
+//
+// $thin - 100;
+// $light  - 300;
+// $normal -  400;
+// $medium - 500;
+// $bold - 700;
+// $ultra-bold - 900;
+//
+//markup:
+// <div style="font-weight: {$modifiers};">{$modifiers}</div>
+//
+// Styleguide 1.1
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900);
+
+
+// Fonts
+$fontDefault: "Roboto", Helvetica, Arial, sans-serif;
+$fontHighlight: Georgia, Times, "Times New Roman", serif;
+
+// Font Weights
+$thin: 100;
+$light: 300;
+$normal: 400;
+$medium: 500;
+$bold: 700;
+$ultra-bold: 900;
+
+// Headings
+//
+// markup:
+// <h1>Heading 1</h1>
+// <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque massa ipsum, tincidunt vel convallis in, suscipit et risus. Morbi erat dolor, mattis at dignissim sed, feugiat sed lorem.
+// <h2>Heading 2</h2>
+// <p>Mauris feugiat suscipit turpis, ut rhoncus lectus finibus sed. Etiam suscipit consectetur eros vitae venenatis.</p>
+// <h3>Heading 3</h3>
+// <p>Ut leo ipsum, tincidunt vel mauris eget, convallis egestas justo. Nunc ligula neque, porta ac lorem id, ultrices dapibus dolor.</p>
+// <h4>Heading 4</h4>
+// <p> Phasellus interdum massa ante, ac  felis ultricies at. Fusce vulputate, odio sed convallis laoreet, tortor orci venenatis massa, a placerat ligula nisl vitae felis. In pellentesque ornare eleifend. Suspendisse potenti. Quisque eget mauris enim.</p>
+// <h5>Heading 5</h5>
+//
+// Styleguide 1.2
+
+body {
+  font-family: $fontDefault;
+  font-weight: $thin;
+  color: $black;
+  line-height: 1.5;
+  font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6,
+ul, ol, dl,
+blockquote, p, address,
+table,
+form,
+pre,
+hr {
+  margin-bottom: 2rem;
+}
+
+h1 {
+  @include font-size(50px);
+  line-height: 1;
+  margin: 0 0 1rem 0;
+  @include breakpoint(md) {
+    @include font-size(60px);
+    margin: 0 0 2rem 0;
+  }
+}
+
+h2 {
+  @include font-size(48px);
+  line-height: 0.9;
+  margin: 0 0 2rem 0;
+}
+
+h3 {
+  @include font-size(36px);
+}
+
+h4 {
+  @include font-size(24px);
+}
+
+h5 {
+  @include font-size(20px);
+}
+
+h6 {
+  @include font-size(16px);
+}
+
+// Blockqoute
+//
+// Styleguide 1.3
+//
+// markup:
+// <blockquote>Blockquote ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida.</blockquote>
+
+blockquote {
+  display: block;
+  padding: 1rem 3rem 1rem 2.5rem;
+  position: relative;
+  font-family: $fontHighlight;
+  @include font-size(20px);
+  line-height: 1.2;
+  font-style: italic;
+}
+
+blockquote::before {
+  content: "\201C";
+  @include font-size(60px);
+  font-weight: $bold;
+  color: $grey-400;
+  font-style: normal;
+  position: absolute;
+  left: 0;
+  top: 5px;
+}
+
+blockquote::after {
+  content: "";
+}
+
+// Lists
+//
+// Styleguide 1.4
+//
+// markup:
+// <p>Unordered List</p>
+// <ul>
+// <li>lorem</li>
+// <li>Ipsum</li>
+// <li>dolor</li>
+// </ul>
+// <p>Ordered List</p>
+// <ol>
+// <li>lorem</li>
+// <li>Ipsum</li>
+// <li>dolor</li>
+// </ol>
+
+ul, ol {
+  list-style-position: inside;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+// Other Elements
+//
+// Styleguide 1.5
+//
+// markup:
+// <p><strong> - Strong</strong></p>
+// <p class="large"> - Larger / Highlight text</p>
+
+p {
+  margin: 0 0 2rem 0;
+}
+
+strong {
+  font-weight: $normal;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+em {
+  font-family: $fontHighlight;
+  font-style: italic;
+}
+
+.large {
+  font-weight: $normal;
+  color: $grey-800;
+}

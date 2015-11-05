@@ -1,0 +1,44 @@
+/**
+*
+* Front Icons
+*
+**/
+
+.icons {
+  background: $grey-50;
+  border-bottom: 1px solid $grey-200;
+  text-align: center;
+  padding: 3rem 0;
+  @include breakpoint(md) {
+    padding: 5rem 0;
+  }
+
+  h2 {
+    @include font-size(40px);
+    margin: 0 0 3rem 0;
+    @include breakpoint(md) {
+      @include font-size(50px);
+      margin: 0 0 4rem 0;
+    }
+  }
+  .icon-container {
+    margin: 0 0 2rem 0;
+  }
+  .icon-box {
+    display: inline-block;
+    padding: 3rem;
+    margin: 0 1rem 1rem 0;
+    border: 1px solid $grey-200;
+    background: $white;
+    &:hover .icon {
+      fill: $blue;
+    }
+  }
+  .icon {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    fill: $grey-600;
+    transition: all .3s;
+  }
+}

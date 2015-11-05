@@ -1,0 +1,23 @@
+/**
+*
+* Global
+*
+**/
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+::selection {
+  background: $blue;
+  color: $white;
+}

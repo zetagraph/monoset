@@ -1,0 +1,86 @@
+ // Forms
+ //
+// Form Elements Styles
+//
+// Styleguide 4.0
+//
+// markup:
+// <div class="form-item"><input type="text" name="" value="" placeholder="text"></div>
+// <div class="form-item"><input type="text" name="" value="" placeholder="text"></div>
+// <div class="form-item"><textarea rows="4" cols="50"></textarea></div>
+// <input type="submit" name="" value="Submit">
+
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  display: block;
+  background: none;
+  border: 1px solid $grey-300;
+  background-color: $white;
+  width: 100%;
+  padding: 1rem;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  transition: border 0.3s;
+  @include font-size(14px);
+  color: $blue;
+  font-family: $fontDefault;
+  font-weight: $thin;
+}
+
+input[type="submit"] {
+  display: block;
+  border: none;
+  background: $grey-500;
+  width: 100%;
+  padding: 1rem;
+  margin: 0 0 1rem;
+  cursor: pointer;
+  color: $white;
+  @include font-size(14px);
+  font-weight: $thin;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+  &:hover {
+    background: $blue;
+    color: $white;
+  }
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: $blue;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+select {
+  background: transparent;
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid $grey-300;
+  border-radius: 0;
+  background-color: $white;
+  background: url(../icons/chevron-down.svg) no-repeat 99% 50%;
+  color: $blue;
+  box-shadow: none;
+  border-radius: none;
+  transition: border 0.3s;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+// Form item wrappers
+
+.form-item {
+  margin: 0 0 1rem;
+}
