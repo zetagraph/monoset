@@ -38,6 +38,7 @@
 %}
 <!DOCTYPE html>
 <html{{ html_attributes }}>
+
 <!-- Fallback to homescreen for Chrome <39 on Android -->
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="application-name" content="Drupal 8">
@@ -52,10 +53,10 @@
 <!-- Tile icon for Win8 (144x144 + tile color) -->
 <meta name="msapplication-TileImage" content="themes/monoset/images/touch/ms-touch-icon-144x144-precomposed.png">
   <head>
-    {{ head }}
-    <title>{{ head_title }}</title>
-    {{ styles }}
-    {{ scripts }}
+    <head-placeholder token="{{ placeholder_token|raw }}">
+    <title>{{ head_title|safe_join(' | ') }}</title>
+    <css-placeholder token="{{ placeholder_token|raw }}">
+    <js-placeholder token="{{ placeholder_token|raw }}">
   </head>
 
   <body{{ attributes.addClass(body_classes) }}>
@@ -65,6 +66,6 @@
     {{ page_top }}
     {{ page }}
     {{ page_bottom }}
-    {{ scripts_bottom }}
+    <js-bottom-placeholder token="{{ placeholder_token|raw }}">
   </body>
 </html>
