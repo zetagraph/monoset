@@ -138,15 +138,18 @@ gulp.task('styleguide:generate', function() {
   return gulp.src('scss/**/*.scss')
     .pipe(styleguide.generate({
         title: 'Monoset Styleguide',
+        overviewPath: 'README.md',
         server: true,
         port: 3005,
+        // customColors: '/scss/utils/_styleguide_custom_variables.scss',
+        // For static style guide. Generat relative to your environment:
+        // appRoot: '/themes/monoset/styleguide',
+        extraHead: [
+          '<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900">',
+        ],
         rootPath: outputPath,
-        overviewPath: 'README.md',
-        // extraHead: [
-        //   '<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900">',
-        // ],
         disableEncapsulation: true,
-        disableHtml5Mode: true
+        // disableHtml5Mode: true
       }))
     .pipe(gulp.dest(outputPath));
 });
