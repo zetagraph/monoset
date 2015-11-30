@@ -9,7 +9,7 @@
   background-size: cover;
   animation: blurIn 1.5s;
   display: flex;
-  .no-touch & {
+  .no-touchevents & {
     @include breakpoint(md) {
       background-attachment: fixed;
     }
@@ -17,7 +17,7 @@
   .cover-title {
     text-align: center;
     margin: 40% 0 0 0;
-    .no-touch & {
+    .no-touchevents & {
       @include breakpoint(md) {
         position: fixed;
         top: 40%;
