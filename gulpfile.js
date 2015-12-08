@@ -140,7 +140,7 @@ gulp.task('styleguide:generate', function() {
         title: 'Monoset Styleguide',
         overviewPath: 'README.md',
         server: true,
-        port: 3005,
+        port: 3010,
         // customColors: '/scss/utils/_styleguide_custom_variables.scss',
         // For static style guide. Generat relative to your environment:
         // appRoot: '/themes/monoset/styleguide',
@@ -163,11 +163,20 @@ gulp.task('styleguide:applystyles', function() {
     .pipe(gulp.dest(outputPath));
 });
 
-gulp.task('styleguide', ['styleguide:generate', 'styleguide:applystyles']);
+// Style guide generator incorporated into default gulp task (Experimental).
+// Uncomment and replace the current task bellow if you need a style guide generated when you run 'gulp'.
+// Style guide will be served on port: 3010.
 
+// gulp.task('styleguide', ['styleguide:generate', 'styleguide:applystyles']);
+
+// Default tasks with styleguide.
+// gulp.task('default', ['sass', 'browser-sync', 'styleguide'], function() {
+// gulp.watch("scss/**/*.scss", ['sass', 'styleguide']);
+// gulp.watch("scripts/**/*.js", ['js']);
+// });
 
 // Default task to be run with `gulp`
-gulp.task('default', ['sass', 'browser-sync', 'styleguide'], function() {
-  gulp.watch("scss/**/*.scss", ['sass', 'styleguide']);
+gulp.task('default', ['sass', 'browser-sync'], function() {
+  gulp.watch("scss/**/*.scss", ['sass']);
   gulp.watch("scripts/**/*.js", ['js']);
 });
