@@ -2,7 +2,7 @@
 
 Uses Node.js, Gulp, BrowserSync for Sass compiling, task running and Browser Syncing.
 
-**Demo**: http://subtleshift.net
+**Demo**: http://subtleshift.me
 
 ## Requirements
 - Node.js
