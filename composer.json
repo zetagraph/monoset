@@ -1,0 +1,21 @@
+{
+    "name": "drugan/monoset",
+    "description": "Drupal 8 Theme",
+    "type": "drupal-theme",
+    "homepage": "https://github.com/zetagraph",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrei Zvonkov",
+            "email": "zvonkov@gmail.com",
+            "role": "Maintainer"
+        },
+        {
+            "name": "Vladimir Proshin",
+            "email": "proshins@gmail.com",
+            "role": "Maintainer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
