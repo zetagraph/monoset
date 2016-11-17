@@ -1,5 +1,9 @@
 /*global -$ */
 'use strict';
+if (!this.Promise) {
+  //require('es6-promise').polyfill();
+  var Promise = require('es6-promise').Promise;
+}
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var browserSync = require('browser-sync');
@@ -129,7 +133,7 @@ gulp.task('browser-sync', function() {
   ];
   //initialize browsersync
   browserSync.init(files, {
-    proxy: "d8.dev" // BrowserSync proxy, change to match your local environment
+    proxy: "http://mysites/amonoset/web/" // BrowserSync proxy, change to match your local environment
   });
 });
 

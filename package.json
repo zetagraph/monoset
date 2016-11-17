@@ -2,7 +2,7 @@
   "name": "monoset",
   "version": "1.0.2",
   "description": "Drupal 8 Theme",
-  "author": "Andrei Zvonkov < zvonkov@gmail.com>",
+  "author": "Andrei Zvonkov <zvonkov@gmail.com>",
   "homepage": "http://subtleshift.net",
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   ],
   "devDependencies": {
     "browser-sync": "^2.10.0",
+    "es6-promise": "^3.3.1",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-beautify": "^2.0.0",

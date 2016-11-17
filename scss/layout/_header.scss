@@ -6,17 +6,15 @@
 
 .header-main {
   position: relative;
-  height: 3.8rem;
+  min-height: 3.8rem;
   border-bottom: solid 1px $grey-200;
   @include breakpoint(md) {
     position: fixed;
     z-index: 100;
-    top: 0;
     width: 100%;
     padding: 1rem 0;
     background: $white;
   }
-
   // Front Page Header Tweaks
   > .path-frontpage & {
     border: none;
@@ -35,16 +33,6 @@
   }
 }
 
-.logo {
-  display: none;
-  @include breakpoint(md) {
-    display: block;
-    float: left;
-    width: 20px;
-    height: 26px;
-  }
-}
-
 .logo-svg {
   fill: $grey-500;
   transition: all .3s;
@@ -53,11 +41,47 @@
   }
 }
 
-.header-main .menu {
+div[class$="branding"] {
+  display: block;
+  text-align: center;
+  @include breakpoint(md) {
+    text-align: initial;
+    display: inline-block;
+  }
+}
+
+.site-logo {
+  float: initial;
+  @include breakpoint(md) {
+    float: left;
+  }
+}
+
+.site-name,
+.site-slogan {
   display: none;
   @include breakpoint(md) {
+    display: table;
+    padding: 1rem 0 0 1rem;
+    float: right;
+    clear: right;
+  }
+}
+
+.site-slogan {
+  font-style: oblique;
+}
+
+.header-main nav {
+  display: inline;
+}
+
+.header-main .menu {
+  display: none;
+  float: initial;
+  @include breakpoint(md) {
     display: block;
-    margin: 3px 0 0 0;
+    margin: 3px 0 0 1.5rem;
     float: right;
   }
 }
