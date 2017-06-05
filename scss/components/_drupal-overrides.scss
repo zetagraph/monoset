@@ -5,11 +5,8 @@
 **/
 
 .header-main {
-  top: 0;
-  @include breakpoint(md) {
-    .toolbar-fixed & {
-      top: 39px;
-    }
+  .toolbar-fixed & {
+    top: 39px;
   }
   .toolbar-fixed.toolbar-tray-open & {
     top: 79px;
