@@ -1,8 +1,8 @@
 {
-    "name": "zetagraph/monoset",
+    "name": "monoset",
     "description": "Drupal 8 Theme",
     "type": "drupal-theme",
-    "homepage": "https://github.com/zetagraph",
+    "homepage": "https://github.com/zetagraph/monoset",
     "license": "MIT",
     "authors": [
         {
