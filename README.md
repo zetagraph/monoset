@@ -4,7 +4,7 @@ Uses Node.js, Gulp, BrowserSync for Sass compiling, task running and Browser Syn
 
 ![Screenshot](https://www.drupal.org/files/project-images/monoset-screen-shot.jpg)
 
-**Demo**: http://subtleshift.me
+**Demo**: http://dev-zetagraph.pantheonsite.io
 
 ## Requirements
 - Node.js
