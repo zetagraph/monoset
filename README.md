@@ -2,7 +2,7 @@
 
 Uses Node.js, Gulp, BrowserSync for Sass compiling, task running and Browser Syncing.
 
-![Screenshot](https://www.drupal.org/files/project-images/monoset-screen-shot.jpg)
+![Screenshot](https://www.drupal.org/files/project-images/monoset-screen-shot_0.jpg)
 
 **Demo**: http://dev-zetagraph.pantheonsite.io
 
