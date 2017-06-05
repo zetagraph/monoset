@@ -133,7 +133,7 @@ gulp.task('browser-sync', function() {
   ];
   //initialize browsersync
   browserSync.init(files, {
-    proxy: "http://mysites/amonoset/web/" // BrowserSync proxy, change to match your local environment
+    proxy: "mysite.dev" // BrowserSync proxy, change to match your local environment
   });
 });
 
